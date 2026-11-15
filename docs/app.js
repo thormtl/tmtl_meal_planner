@@ -71,50 +71,69 @@ const art = (m) => `img/dish-${ART[m.family] || "andet"}.webp`;
 
 function renderDays() {
   const root = $("#days"); root.replaceChildren();
+  const moved = displaced();
   plan.days.forEach((d, i) => {
-    const m = d.options[state.pick[i]];
+    const cov = covered(i), m = cov ? own(i) : dishFor(i), x = mult(i);
     const photo = el("div", { class: "photo" },
       m.image
         ? el("img", { class: "dish-photo", src: m.image, alt: m.name, loading: i < 2 ? "eager" : "lazy", referrerpolicy: "no-referrer",
             on: { error: (e) => { e.target.replaceWith(el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" }))); } } })
         : el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" })),
       el("span", { class: "daytag" }, d.day),
+      cov ? el("span", { class: "leftover-tag" }, `🍲 Rester fra ${plan.days[i - 1].day.toLowerCase()}`) : "",
       el("span", { class: "badge-art" }, el("img", { src: art(m), alt: "" })));
+    if (cov) {
+      root.append(el("article", { class: "day covered" }, photo,
+        el("div", { class: "body" },
+          el("h3", {}, `Rester: ${dishFor(i - 1).name}`),
+          el("p", { class: "hint" }, `${m.name} er sat på pause. Vælg den på en anden dag under "Byt retten", eller køb den ikke denne uge.`))));
+      return;
+    }
     const pills = el("div", { class: "pills" },
       el("span", { class: "pill" }, `⏱ ${m.time || "?"}`),
-      el("span", { class: "pill" }, `ca. ${kr(m.cost)}`),
+      el("span", { class: "pill" }, `ca. ${kr(m.cost * x)}`),
+      x > 1 ? el("span", { class: "pill double" }, "Dobbelt portion") : "",
       m.offer_share >= 0.15 ? el("span", { class: "pill offer" }, `${Math.round(m.offer_share * 100)}% på tilbud`) : "",
       m.kid >= 3 ? el("span", { class: "pill kids" }, "Børnefavorit") : "");
-    const card = el("article", { class: "day" },
+    const last = i === plan.days.length - 1;
+    const lo = last ? "" : el("button", { class: "lo-btn", "aria-pressed": String(!!LO()[i]),
+      on: { click: () => setLeftover(i, !LO()[i]) } },
+      LO()[i] ? `✓ Rester til ${plan.days[i + 1].day.toLowerCase()}` : "🍲 Rester til dagen efter");
+    const b = BR()[i];
+    const ownBtns = d.options.map((o, j) =>
+      el("button", { "aria-pressed": String(!b && j === state.pick[i]), title: o.name,
+        on: { click: () => { state.pick[i] = j; delete BR()[i]; save(); render(); } } },
+        el("img", { src: art(o), alt: "" }), el("span", {}, o.name)));
+    const borrowBtns = moved.filter((mv) => mv.d !== i).map((mv) =>
+      el("button", { class: "borrow", "aria-pressed": String(!!b && b.d === mv.d && b.o === mv.o), title: mv.m.name,
+        on: { click: () => { BR()[i] = { d: mv.d, o: mv.o }; save(); render(); } } },
+        el("img", { src: art(mv.m), alt: "" }), el("span", {}, `${mv.m.name} · fra ${plan.days[mv.d].day.toLowerCase()}`)));
+    root.append(el("article", { class: "day" + (x > 1 ? " doubled" : "") },
       photo,
       el("div", { class: "body" },
         el("h3", {}, m.name), pills,
         m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskriften →") : "",
-        ingredients(m, i)),
+        lo,
+        ingredients(m, i, x)),
       el("p", { class: "swaplabel" }, "Byt retten"),
-      el("div", { class: "swaps" }, ...d.options.map((o, j) =>
-        el("button", { "aria-pressed": String(j === state.pick[i]), title: o.name,
-          on: { click: () => { state.pick[i] = j; save(); render(); } } },
-          el("img", { src: art(o), alt: "" }), el("span", {}, o.name)))));
-    root.append(card);
+      el("div", { class: "swaps" }, ...ownBtns, ...borrowBtns)));
   });
 }
 
-
 // fold-out ingredient overview: what the dinner needs, which parts are on offer, and the saving
-function ingredients(m, i) {
+function ingredients(m, i, x = 1) {
   const buy = m.products.filter((p) => !p.pantry), home = m.products.filter((p) => p.pantry);
-  const offers = buy.filter((p) => p.offer).length, saving = m.saving || 0;
+  const offers = buy.filter((p) => p.offer).length, saving = (m.saving || 0) * x;
   const open = state.open && state.open[i];
   const summary = el("summary", {},
-    el("span", { class: "ing-title" }, `Ingredienser (${buy.length})`),
+    el("span", { class: "ing-title" }, `Ingredienser (${buy.length})${x > 1 ? " · dobbelt" : ""}`),
     offers ? el("span", { class: "pill offer" }, `${offers} på tilbud`) : "",
     saving >= 0.5 ? el("span", { class: "pill save" }, `spar ${kr(saving)}`) : "");
   const row = (p, isHome) => el("li", { class: p.offer && !isHome ? "on-offer" : "" },
-    el("span", { class: "ing-name" }, `${p.qty > 1 ? p.qty + " × " : ""}${p.name}`, el("small", {}, p.size || "")),
+    el("span", { class: "ing-name" }, `${p.qty * (isHome ? 1 : x) > 1 ? p.qty * (isHome ? 1 : x) + " × " : ""}${p.name}`, el("small", {}, p.size || "")),
     el("span", { class: "ing-price" },
-      p.before && p.before > p.price ? el("s", {}, kr(p.before * p.qty)) : "",
-      el("b", {}, kr(p.price * p.qty)),
+      p.before && p.before > p.price ? el("s", {}, kr(p.before * p.qty * (isHome ? 1 : x))) : "",
+      el("b", {}, kr(p.price * p.qty * (isHome ? 1 : x))),
       p.offer && !isHome ? el("em", {}, p.offer) : ""));
   const d = el("details", { class: "ing", ...(open ? { open: "" } : {}),
     on: { toggle: (e) => { state.open = state.open || {}; state.open[i] = e.target.open; save(); } } },
@@ -149,11 +168,39 @@ function renderBasics() {
   });
 }
 
-function chosenDinners() { return plan.days.map((d, i) => d.options[state.pick[i]]); }
+// --- day model: leftovers ("Rester til dagen efter") and borrowed dinners -------------------------------
+// state.leftover[i] = true  -> day i is cooked double; day i+1 is covered (greyed, nothing bought for it)
+// state.borrow[i] = {d, o}  -> day i uses plan.days[d].options[o] (a dinner displaced from a covered day)
+const LO = () => (state.leftover = state.leftover || {});
+const BR = () => (state.borrow = state.borrow || {});
+const covered = (i) => i > 0 && !!LO()[i - 1];
+const own = (i) => plan.days[i].options[state.pick[i]];
+function dishFor(i) {
+  if (covered(i)) return null;
+  const b = BR()[i];
+  if (b && covered(b.d) && plan.days[b.d] && plan.days[b.d].options[b.o]) return plan.days[b.d].options[b.o];
+  return own(i);
+}
+const mult = (i) => (LO()[i] && !covered(i) ? 2 : 1);
+// dinners pushed out by leftovers, offered to the other days: [{d, o, m}]
+const displaced = () => plan.days.map((_, i) => i).filter(covered).map((i) => ({ d: i, o: state.pick[i], m: own(i) }));
+function setLeftover(i, on) {
+  if (on) {
+    LO()[i] = true; delete LO()[i + 1];           // the next day becomes leftovers, so it can't make leftovers itself
+    delete BR()[i + 1];
+  } else {
+    delete LO()[i];
+    for (const k of Object.keys(BR())) if (BR()[k].d === i + 1) delete BR()[k];  // its dinner is back on its own day
+  }
+  save(); render();
+}
+function chosenDinners() {
+  return plan.days.map((d, i) => ({ i, m: dishFor(i), x: mult(i) })).filter((c) => c.m);
+}
 
 function pantryItems() {
   const map = new Map();
-  for (const m of chosenDinners()) for (const p of m.products) if (p.pantry && !map.has(p.id)) map.set(p.id, p);
+  for (const { m } of chosenDinners()) for (const p of m.products) if (p.pantry && !map.has(p.id)) map.set(p.id, p);
   return [...map.values()];
 }
 
@@ -177,8 +224,8 @@ function lines() {
     const l = map.get(p.id) || { id: p.id, name: p.name, size: p.size || null, price: p.price, qty: 0, for: [] };
     l.qty += qty; if (!l.for.includes(why)) l.for.push(why); map.set(p.id, l);
   };
-  chosenDinners().forEach((m) => m.products.forEach((p) => {
-    if (!p.pantry) add(p, p.qty, m.name);
+  chosenDinners().forEach(({ m, x }) => m.products.forEach((p) => {
+    if (!p.pantry) add(p, p.qty * x, x > 1 ? `${m.name} (dobbelt)` : m.name);
     else if (state.pantry[p.id]) add({ ...p, qty: 1 }, map.has(p.id) ? 0 : 1, m.name);  // staples: once
   }));
   plan.basics.forEach((b, i) => {
@@ -211,7 +258,9 @@ function download() {
     how_to_use: "Agent: put these products in the BilkaToGo cart with handle-mcp " +
       "set_cart_quantities(store='bilkatogo', items={id: qty}). qty is the absolute count per product id. " +
       "Only fill the cart: never order, pay or book a delivery time. The human checks the cart and pays.",
-    dinners: chosenDinners().map((m, i) => ({ day: plan.days[i].day, name: m.name, url: m.url })),
+    dinners: plan.days.map((d, i) => covered(i)
+      ? { day: d.day, name: `Rester fra ${plan.days[i - 1].day.toLowerCase()}`, leftovers: true }
+      : { day: d.day, name: dishFor(i).name, url: dishFor(i).url, ...(mult(i) > 1 ? { double: true } : {}) }),
     items: ls.map(({ id, name, size, qty, price, for: f }) => ({ id, name, size, qty, price, for: f })),
     estimated_total: Math.round(ls.reduce((a, l) => a + l.price * l.qty, 0) * 100) / 100,
   };

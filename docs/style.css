@@ -128,3 +128,16 @@ footer { position: fixed; left: 12px; right: 12px; bottom: 12px; max-width: 736p
 .ing-price s { color: var(--muted); font-size: .8rem; } .ing-price b { font-variant-numeric: tabular-nums; }
 .ing-price em { font-style: normal; font-size: .72rem; font-weight: 700; color: var(--tomato); white-space: normal; max-width: 140px; text-align: right; }
 .ing-home { color: var(--muted); font-size: .82rem; margin: 6px 8px 0; }
+
+/* leftovers ("Rester til dagen efter") */
+.lo-btn { display: inline-flex; align-items: center; gap: 6px; margin: 10px 0 2px; font: inherit; font-weight: 700; font-size: .9rem;
+  padding: 7px 14px; border-radius: 999px; border: 2px dashed color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: var(--paper); color: var(--ink); cursor: pointer; }
+.lo-btn[aria-pressed="true"] { border-style: solid; border-color: var(--teal); background: var(--teal); color: #fff; }
+.pill.double { background: var(--teal); color: #fff; border-color: transparent; }
+.day.covered { opacity: .6; }
+.day.covered .photo img { filter: grayscale(1); }
+.day.covered .body h3 { margin-right: 0; }
+.leftover-tag { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--teal); color: #fff;
+  font-family: var(--round); font-weight: 800; padding: 10px 18px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,.25); white-space: nowrap; }
+.swaps button.borrow { border-style: dashed; }

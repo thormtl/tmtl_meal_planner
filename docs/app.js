@@ -101,7 +101,7 @@ function renderDays() {
         photoOf(src, i, el("span", { class: "leftover-tag" }, `🍲 Rester fra ${prev}`)),
         el("div", { class: "body" },
           el("h3", {}, `Rester: ${src.name}`),
-          el("p", { class: "hint" }, `${mine.name} er sprunget over i indkøbslisten. Vil I have den en anden dag, så vælg »Lån: ${mine.name}« under Byt retten.`),
+          el("p", { class: "hint" }, `${mine.name} er sprunget over i indkøbslisten. Alle 4 retter fra ${lower(d.day)} kan vælges på de andre dage under »Lån fra ${lower(d.day)}«.`),
           el("button", { class: "lo-btn undo", "data-key": `day${i}-undo`, on: { click: () => setLeftover(i - 1, false) } },
             `↺ Lav ${lower(mine.name)} ${lower(d.day)} alligevel`))));
       return;
@@ -123,11 +123,13 @@ function renderDays() {
       el("button", { "data-key": `day${i}-opt${j}`, "aria-pressed": String(!b && j === state.pick[i]), title: o.name,
         on: { click: () => { state.pick[i] = j; delete BR()[i]; changed(); } } },
         el("img", { src: art(o), alt: "" }), el("span", {}, o.name)));
-    // dinners pushed out by leftovers can be borrowed by other days (not by the day that makes those leftovers)
-    const borrowBtns = moved.filter((mv) => mv.d !== i && !(LO()[i] && mv.d === i + 1)).map((mv) =>
-      el("button", { class: "borrow", "data-key": `day${i}-borrow${mv.d}`, "aria-pressed": String(!!b && b.d === mv.d && b.o === mv.o),
-        title: mv.m.name, on: { click: () => { BR()[i] = { d: mv.d, o: mv.o }; changed(); } } },
-        el("img", { src: art(mv.m), alt: "" }), el("span", {}, `Lån: ${mv.m.name} (fra ${lower(plan.days[mv.d].day)})`)));
+    // all dinners of a leftover day can be borrowed by any other day (also the one cooking double: then that dish is doubled)
+    const borrowGroups = [...new Set(moved.map((mv) => mv.d))].filter((dd) => dd !== i).map((dd) => [
+      el("p", { class: "swaplabel borrowlabel" }, `Lån fra ${lower(plan.days[dd].day)} (rester-dag)`),
+      el("div", { class: "swaps" }, ...moved.filter((mv) => mv.d === dd).map((mv) =>
+        el("button", { class: "borrow", "data-key": `day${i}-borrow${mv.d}-${mv.o}`, "aria-pressed": String(!!b && b.d === mv.d && b.o === mv.o),
+          title: mv.m.name, on: { click: () => { BR()[i] = { d: mv.d, o: mv.o }; changed(); } } },
+          el("img", { src: art(mv.m), alt: "" }), el("span", {}, mv.m.name))))]).flat();
     root.append(el("article", { class: "day" + (x > 1 ? " doubled" : "") + (m.image ? " has-badge" : "") },
       photoOf(m, i),
       el("div", { class: "body" },
@@ -138,7 +140,8 @@ function renderDays() {
         LO()[i] ? el("p", { class: "lo-hint" }, `${next[0].toUpperCase() + next.slice(1)} er rester, så den dag købes der ikke ind til.`) : "",
         ingredients(m, i, x)),
       el("p", { class: "swaplabel" }, "Byt retten"),
-      el("div", { class: "swaps" }, ...ownBtns, ...borrowBtns)));
+      el("div", { class: "swaps" }, ...ownBtns),
+      ...borrowGroups));
   });
 }
 
@@ -212,7 +215,9 @@ function dishFor(i) {
   return own(i);
 }
 const mult = (i) => (LO()[i] && !covered(i) ? 2 : 1);
-const displaced = () => plan.days.map((_, i) => i).filter(covered).map((i) => ({ d: i, o: state.pick[i], m: own(i) }));
+// every dinner (main + swaps) of a day covered by leftovers can be borrowed by the other days: [{d, o, m}]
+const displaced = () => plan.days.map((_, i) => i).filter(covered)
+  .flatMap((i) => plan.days[i].options.map((m, o) => ({ d: i, o, m })));
 function setLeftover(i, on) {
   if (on) {
     LO()[i] = true; delete LO()[i + 1];           // the next day becomes leftovers, so it can't make leftovers itself

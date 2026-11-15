@@ -94,6 +94,8 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .swaps button:hover { transform: translateY(-1px); border-color: var(--accent); }
 .swaps button[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, var(--paper)); }
 .swaps button.borrow { border-style: dashed; }
+.borrowlabel { color: var(--teal); }
+@media (prefers-color-scheme: dark) { .borrowlabel { color: #7fd3d8; } }
 
 /* ingredient overview */
 .ing { margin: 8px 0 4px; border-top: 1px dashed var(--line); padding-top: 4px; }

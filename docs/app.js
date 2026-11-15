@@ -172,7 +172,7 @@ function renderList() {
   const min = plan.minimum_order || 0;
   $("#meterfill").style.width = min ? Math.min(100, (total / min) * 100) + "%" : "100%";
   $("#minimum").textContent = `${ls.length} varer · ` + (min && total < min
-    ? `${kr(min - total)} til minimumskøb` : "minimumskøb nået");
+    ? `${kr(min - total)} til min.køb` : "min.køb nået ✓");
 }
 
 function download() {

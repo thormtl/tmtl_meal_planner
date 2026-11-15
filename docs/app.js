@@ -168,11 +168,11 @@ function renderList() {
     ...ls.map((l) => el("div", { class: "row" },
       el("div", { class: "name" }, `${l.qty} × ${l.name}`, el("small", {}, `${l.size || ""} · ${l.for.join(", ")}`)),
       el("span", { class: "price" }, kr(l.price * l.qty)))));
-  $("#total").textContent = `${kr(total)} · ${ls.length} varer`;
+  $("#total").textContent = kr(total);
   const min = plan.minimum_order || 0;
   $("#meterfill").style.width = min ? Math.min(100, (total / min) * 100) + "%" : "100%";
-  $("#minimum").textContent = min && total < min
-    ? `${kr(min - total)} til minimumskøb (${kr(min)})` : "Minimumskøb nået";
+  $("#minimum").textContent = `${ls.length} varer · ` + (min && total < min
+    ? `${kr(min - total)} til minimumskøb` : "minimumskøb nået");
 }
 
 function download() {

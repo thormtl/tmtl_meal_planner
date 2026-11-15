@@ -193,6 +193,14 @@ function download() {
   const blob = new Blob([JSON.stringify(doc, null, 1)], { type: "application/json" });
   const a = el("a", { href: URL.createObjectURL(blob), download: `bilkatogo-liste-${plan.week}.json` });
   document.body.append(a); a.click(); a.remove();
+  toast("Gemt ✓ Læg filen i Drive › Madplan › inbox");
+}
+
+function toast(msg) {
+  let t = document.querySelector(".toast");
+  if (!t) { t = el("div", { class: "toast", role: "status" }); document.body.append(t); }
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 3500);
 }
 
 $("#save").addEventListener("click", download);

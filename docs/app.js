@@ -93,7 +93,7 @@ function renderDays() {
       el("span", { class: "pill" }, `⏱ ${m.time || "?"}`),
       el("span", { class: "pill" }, `ca. ${kr(m.cost * x)}`),
       x > 1 ? el("span", { class: "pill double" }, "Dobbelt portion") : "",
-      m.offer_share >= 0.15 ? el("span", { class: "pill offer" }, `${Math.round(m.offer_share * 100)}% på tilbud`) : "",
+      dishSaving(m, x) >= 0.5 ? el("span", { class: "pill offer" }, `spar ca. ${kr(dishSaving(m, x))}`) : "",
       m.kid >= 3 ? el("span", { class: "pill kids" }, "Børnefavorit") : "");
     const last = i === plan.days.length - 1;
     const lo = last ? "" : el("button", { class: "lo-btn", "aria-pressed": String(!!LO()[i]),
@@ -120,10 +120,19 @@ function renderDays() {
   });
 }
 
+// saving on one product line, same rule as planner/build_plan.py item_saving():
+// normal price known -> (before - price) * qty; multi-buy "N for Y" -> only for complete sets of N
+function itemSaving(p, qty) {
+  if (p.before && p.before > p.price) return (p.before - p.price) * qty;
+  if (p.multi && qty >= p.multi.n) return Math.max(0, Math.floor(qty / p.multi.n) * (p.multi.n * p.price - p.multi.total));
+  return 0;
+}
+const dishSaving = (m, x = 1) => m.products.filter((p) => !p.pantry).reduce((s, p) => s + itemSaving(p, p.qty * x), 0);
+
 // fold-out ingredient overview: what the dinner needs, which parts are on offer, and the saving
 function ingredients(m, i, x = 1) {
   const buy = m.products.filter((p) => !p.pantry), home = m.products.filter((p) => p.pantry);
-  const offers = buy.filter((p) => p.offer).length, saving = (m.saving || 0) * x;
+  const offers = buy.filter((p) => p.offer).length, saving = dishSaving(m, x);
   const open = state.open && state.open[i];
   const summary = el("summary", {},
     el("span", { class: "ing-title" }, `Ingredienser (${buy.length})${x > 1 ? " · dobbelt" : ""}`),
@@ -134,7 +143,8 @@ function ingredients(m, i, x = 1) {
     el("span", { class: "ing-price" },
       p.before && p.before > p.price ? el("s", {}, kr(p.before * p.qty * (isHome ? 1 : x))) : "",
       el("b", {}, kr(p.price * p.qty * (isHome ? 1 : x))),
-      p.offer && !isHome ? el("em", {}, p.offer) : ""));
+      p.offer && !isHome ? el("em", {}, p.multi && p.qty * x < p.multi.n
+        ? `${p.offer} · spar kun ved ${p.multi.n} stk` : p.offer) : ""));
   const d = el("details", { class: "ing", ...(open ? { open: "" } : {}),
     on: { toggle: (e) => { state.open = state.open || {}; state.open[i] = e.target.open; save(); } } },
     summary,

@@ -84,30 +84,60 @@ def priced(h: Handle, r: dict, persons: int) -> dict | None:
             "ingredients": d.get("ingredients", [])}
 
 
-def add_savings(h: Handle, plan: list[list[dict]]) -> None:
-    """Normal price + saving for every product on offer in the chosen dinners. get_recipe has only the offer price;
-    search_products returns before_price, matched on the product id. Multi-buy offers ("Mix 10 for 25,00") have no
-    before_price, so they keep the offer text without an amount."""
-    offered = {p["id"]: p["name"] for opts in plan for m in opts for p in m["products"] if p.get("offer")}
+FOER = re.compile(r"før\s*([\d.]+,\d{2}|[\d.]+)", re.I)
+MULTI = re.compile(r"(\d+)\s*for\s*([\d.]+,\d{2}|[\d.]+)", re.I)
+
+
+def dkk(txt: str) -> float:
+    return money(txt.replace(".", "").replace(",", ".")) if "," in txt else money(txt)
+
+
+def item_saving(p: dict, qty: int) -> float:
+    """What buying `qty` of this product saves on its offer. Normal price known -> (before - price) * qty.
+    Multi-buy "N for Y" -> only for complete sets of N: sets * (N * price - Y)."""
+    if p.get("before") and p["before"] > p["price"]:
+        return (p["before"] - p["price"]) * qty
+    mb = p.get("multi")
+    if mb and qty >= mb["n"]:
+        return max(0.0, (qty // mb["n"]) * (mb["n"] * p["price"] - mb["total"]))
+    return 0.0
+
+
+def annotate_offers(p: dict, before: dict | None = None) -> None:
+    """Normal price for an offer product: from product search (before_price, matched on id), else from the offer
+    text ("Tilbud, før 24,95 kr"). Multi-buy offers ("Mix 10 for 25,00") get {"n", "total"}."""
+    t = p.get("offer") or ""
+    if not t:
+        return
+    b = (before or {}).get(p["id"]) or p.get("before")
+    if not b and (m := FOER.search(t)):
+        b = dkk(m.group(1))
+    if b and b > p["price"]:
+        p["before"] = round(b, 2)
+    if (m := MULTI.search(t)) and not p.get("before"):
+        p["multi"] = {"n": int(m.group(1)), "total": dkk(m.group(2))}
+
+
+def add_savings(h: Handle | None, plan: list[list[dict]]) -> None:
+    """Annotate every offer product in the chosen dinners and the saving per dinner (non-pantry items, recipe qty).
+    With a Handle, missing normal prices are looked up via search_products; without one (re-annotating an existing
+    plan), only the offer text is used."""
     before: dict[str, float] = {}
-    for pid, name in offered.items():
-        try:
-            res = h.call("search_products", query=name, stores=["bilkatogo"])
-        except StoreError:
-            continue
-        hit = next((x for x in res if isinstance(x, dict) and str(x.get("id")) == pid), None) if isinstance(res, list) else None
-        if hit and hit.get("before_price"):
-            before[pid] = money(hit["before_price"])
+    if h:
+        offered = {p["id"]: p["name"] for opts in plan for m in opts for p in m["products"] if p.get("offer")}
+        for pid, name in offered.items():
+            try:
+                res = h.call("search_products", query=name, stores=["bilkatogo"])
+            except StoreError:
+                continue
+            hit = next((x for x in res if isinstance(x, dict) and str(x.get("id")) == pid), None) if isinstance(res, list) else None
+            if hit and hit.get("before_price"):
+                before[pid] = money(hit["before_price"])
     for opts in plan:
         for m in opts:
-            saving = 0.0
             for p in m["products"]:
-                b = before.get(p["id"])
-                if b and b > p["price"]:
-                    p["before"] = b
-                    if not p["pantry"]:
-                        saving += (b - p["price"]) * p["qty"]
-            m["saving"] = round(saving, 2)
+                annotate_offers(p, before)
+            m["saving"] = round(sum(item_saving(p, p["qty"]) for p in m["products"] if not p["pantry"]), 2)
             m["offer_count"] = sum(1 for p in m["products"] if p.get("offer") and not p["pantry"])
 
 

@@ -215,7 +215,11 @@
        "price": 2.75,
        "qty": 1,
        "offer": "Mix 10 for 25,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
       },
       {
        "id": "62598",
@@ -710,7 +714,11 @@
        "price": 14.0,
        "qty": 1,
        "offer": "Mix 5 for 69,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 5,
+        "total": 69.0
+       }
       },
       {
        "id": "111016",
@@ -1218,7 +1226,8 @@
        "price": 20.0,
        "qty": 1,
        "offer": "Tilbud, før 24,95 kr",
-       "pantry": false
+       "pantry": false,
+       "before": 24.95
       },
       {
        "id": "37953",
@@ -1236,7 +1245,11 @@
        "price": 2.75,
        "qty": 1,
        "offer": "Mix 10 for 25,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
       },
       {
        "id": "170888",
@@ -1279,7 +1292,7 @@
       "Servér evt. med rugbrød, citron og frisk dild"
      ],
      "score": 10.34,
-     "saving": 0.0,
+     "saving": 4.95,
      "offer_count": 2
     },
     {
@@ -2388,7 +2401,11 @@
        "price": 5.5,
        "qty": 1,
        "offer": "Mix 5 for 25,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 5,
+        "total": 25.0
+       }
       },
       {
        "id": "41701",
@@ -3603,7 +3620,11 @@
        "price": 2.75,
        "qty": 1,
        "offer": "Mix 10 for 25,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
       }
      ],
      "ingredients": [
@@ -4217,7 +4238,11 @@
        "price": 2.75,
        "qty": 1,
        "offer": "Mix 10 for 25,00",
-       "pantry": false
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
       },
       {
        "id": "125823",

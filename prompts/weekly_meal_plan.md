@@ -50,5 +50,5 @@ hand-edit `docs/plan.json`.
 ## Report (keep it short)
 
 - The week, the 7 main dinners, and the page link (`gh api repos/{owner}/{repo}/pages --jq .html_url`).
-- Estimated total, the share on offer, and anything you flagged.
+- Estimated total, the share on offer, the week's saving on offers (sum of `saving` over the 7 main dinners), and anything you flagged.
 - Confirmation that the scans and deploy passed. If a step failed, what failed and what the human must do.

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import pathlib
 import re
 import shutil
@@ -76,7 +77,13 @@ def main() -> None:
         if not cfg["inbox"] or not cfg["done"]:
             sys.exit("set inbox and done in ~/.config/tmtl_meal_planner/config.json")
         inbox, done = pathlib.Path(cfg["inbox"]), pathlib.Path(cfg["done"])
-        for f in sorted(inbox.glob("*.json")):
+        try:
+            names = sorted(n for n in os.listdir(inbox) if n.endswith(".json"))  # raises on no access (glob hides it)
+        except OSError as e:
+            sys.exit(f"cannot read the inbox ({type(e).__name__}: {e.strerror}). macOS privacy settings may block "
+                     "background access to Google Drive: see README 'Watcher access'.")
+        print(f"{dt.datetime.now():%Y-%m-%d %H:%M} inbox: {len(names)} list(s)", flush=True)
+        for f in (inbox / n for n in names):
             try:
                 print(fill(f, done))
             except (ValueError, StoreError, json.JSONDecodeError) as e:

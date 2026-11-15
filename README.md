@@ -45,3 +45,15 @@ The commit is also refused unless the author email is a GitHub no-reply address.
 on every push (`.github/workflows/scan.yml`).
 
 Household details, local paths, shopping lists and receipts live only on your Mac or in your Drive, never in git.
+
+## Watcher access (macOS)
+
+macOS doesn't let background jobs read the Google Drive folder. Give the watcher's own Python access, once:
+
+1. Create a dedicated copy, so the grant covers only this watcher:
+   ```sh
+   cp -R "$(dirname "$(dirname "$(uv python find 3.12)")")" ~/.local/share/tmtl_meal_planner/python
+   ```
+2. In **System Settings > Privacy & Security > Full Disk Access**, click **+**, press **Cmd+Shift+G**, paste
+   `~/.local/share/tmtl_meal_planner/python/bin/python3.12` and switch it on.
+3. Reload the watcher: `python3 scripts/install_watcher.py`. Its log is `~/Library/Logs/tmtl_meal_planner.log`.

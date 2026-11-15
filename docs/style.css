@@ -27,6 +27,7 @@ h1, h2, h3, .eyebrow, #total, button { font-family: var(--round); }
 }
 .hero-text { position: relative; z-index: 1; width: 100%; max-width: 760px; margin: 0 auto; padding: 72px 16px 14px; }
 .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.brand .eyebrow { background: var(--paper); padding: 4px 10px; border-radius: 999px; box-shadow: var(--shadow); }
 .brand img { width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.25); flex: none; }
 .eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 700; color: var(--tomato); }
 .hero h1 { margin: 2px 0 4px; font-size: clamp(2.2rem, 8vw, 3.4rem); line-height: 1.02; letter-spacing: -.02em; font-weight: 800; }

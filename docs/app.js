@@ -40,7 +40,7 @@ async function init() {
     basics: plan.basics.map((b) => ({ on: true, choice: 0, qty: b.qty })),
     pantry: {},
   };
-  $("#meta").textContent = `Uge ${plan.week.split("-W")[1]} · BilkaToGo · ${plan.persons} personer · lavet ${plan.generated}`;
+  $("#meta").textContent = `Uge ${+plan.week.split("-W")[1]} · 7 aftener børnene kan lide · ${plan.persons} personer`;
   render();
 }
 
@@ -65,22 +65,36 @@ function render() {
   renderDays(); renderBasics(); renderPantry(); renderList();
 }
 
+const ART = { pasta: "pasta", burger: "burger", pizza: "pizza", fisk: "fisk", kylling: "kylling",
+  "tex-mex": "texmex", dansk: "dansk", andet: "andet" };
+const art = (m) => `img/dish-${ART[m.family] || "andet"}.webp`;
+
 function renderDays() {
   const root = $("#days"); root.replaceChildren();
   plan.days.forEach((d, i) => {
     const m = d.options[state.pick[i]];
-    const offer = m.offer_share >= 0.15 ? el("span", { class: "badge" }, ` · ${Math.round(m.offer_share * 100)}% på tilbud`) : "";
+    const photo = el("div", { class: "photo" },
+      m.image
+        ? el("img", { class: "dish-photo", src: m.image, alt: m.name, loading: i < 2 ? "eager" : "lazy", referrerpolicy: "no-referrer",
+            on: { error: (e) => { e.target.replaceWith(el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" }))); } } })
+        : el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" })),
+      el("span", { class: "daytag" }, d.day),
+      el("span", { class: "badge-art" }, el("img", { src: art(m), alt: "" })));
+    const pills = el("div", { class: "pills" },
+      el("span", { class: "pill" }, `⏱ ${m.time || "?"}`),
+      el("span", { class: "pill" }, `ca. ${kr(m.cost)}`),
+      m.offer_share >= 0.15 ? el("span", { class: "pill offer" }, `${Math.round(m.offer_share * 100)}% på tilbud`) : "",
+      m.kid >= 3 ? el("span", { class: "pill kids" }, "Børnefavorit") : "");
     const card = el("article", { class: "day" },
-      el("h2", {}, d.day),
-      el("div", { class: "pick" },
-        m.image ? el("img", { src: m.image, alt: "", loading: "lazy", referrerpolicy: "no-referrer" }) : "",
-        el("div", {},
-          el("h3", {}, m.name),
-          el("div", { class: "facts" }, `${m.time || "?"} · ca. ${kr(m.cost)}`, offer),
-          m.url ? el("a", { href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskrift") : "")),
+      photo,
+      el("div", { class: "body" },
+        el("h3", {}, m.name), pills,
+        m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskriften →") : ""),
+      el("p", { class: "swaplabel" }, "Byt retten"),
       el("div", { class: "swaps" }, ...d.options.map((o, j) =>
-        el("button", { "aria-pressed": String(j === state.pick[i]),
-          on: { click: () => { state.pick[i] = j; save(); render(); } } }, j === 0 ? o.name : "↺ " + o.name))));
+        el("button", { "aria-pressed": String(j === state.pick[i]), title: o.name,
+          on: { click: () => { state.pick[i] = j; save(); render(); } } },
+          el("img", { src: art(o), alt: "" }), el("span", {}, o.name)))));
     root.append(card);
   });
 }
@@ -104,7 +118,7 @@ function renderBasics() {
         el("select", { on: { change: (e) => { s.choice = +e.target.value; save(); render(); } } },
           ...b.choices.map((ch, j) => el("option", { value: j, ...(j === s.choice ? { selected: "" } : {}) },
             `${ch.name} ${ch.size || ""}${ch.offer ? " (tilbud)" : ""}`))),
-        c.offer ? el("small", { class: "badge" }, c.offer) : ""),
+        c.offer ? el("small", { class: "tag" }, c.offer) : ""),
       stepper(() => s.qty, (v) => { s.qty = v; save(); render(); }),
       el("span", { class: "price" }, kr(c.price * s.qty))));
   });

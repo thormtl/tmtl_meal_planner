@@ -4,37 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f7f0e3">
 <title>Ugens madplan</title>
+<link rel="icon" href="img/dish-dansk.webp">
+<link rel="preload" as="image" href="img/hero-900.webp" imagesrcset="img/hero-900.webp 900w, img/hero-1600.webp 1600w" imagesizes="100vw">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Ugens madplan</h1>
-  <p id="meta">Henter madplan…</p>
-  <label class="weekpick">Uge <select id="week" aria-label="Vælg uge"></select></label>
-  <p id="old" class="old" hidden>Tidligere uge, kun til inspiration: priser og tilbud gælder ikke længere.</p>
+<header class="hero">
+  <img class="hero-art" src="img/hero-900.webp" srcset="img/hero-900.webp 900w, img/hero-1600.webp 1600w" sizes="100vw" alt="">
+  <div class="hero-text">
+    <p class="eyebrow">BilkaToGo · aftensmad</p>
+    <h1>Ugens madplan</h1>
+    <p id="meta">Henter madplan…</p>
+    <label class="weekpick"><span>Uge</span> <select id="week" aria-label="Vælg uge"></select></label>
+  </div>
 </header>
 <main>
-  <section id="days"></section>
+  <p id="old" class="old" hidden>Tidligere uge, kun til inspiration: priser og tilbud gælder ikke længere.</p>
+  <section id="days" aria-label="Ugens retter"></section>
+
   <section class="block">
-    <h2>Faste varer</h2>
-    <p class="hint">Det du køber hver uge. Slå til og fra, ret antal.</p>
+    <div class="block-head"><img src="img/dish-andet.webp" alt=""><div><h2>Faste varer</h2>
+      <p class="hint">Det I køber hver uge. Slå til og fra, ret antal.</p></div></div>
     <div id="basics"></div>
   </section>
   <section class="block">
-    <h2>Har du det hjemme?</h2>
-    <p class="hint">Krydderier, olie og lignende fra opskrifterne. Sæt flueben, hvis du mangler det.</p>
+    <div class="block-head"><img src="img/dish-kylling.webp" alt=""><div><h2>Har I det hjemme?</h2>
+      <p class="hint">Salt, olie, bouillon og lignende fra opskrifterne. Sæt flueben, hvis I mangler det.</p></div></div>
     <div id="pantry"></div>
   </section>
   <section class="block">
-    <h2>Indkøbsliste</h2>
+    <div class="block-head"><img src="img/dish-pizza.webp" alt=""><div><h2>Indkøbslisten</h2>
+      <p class="hint">Alt samlet. Gem den og læg filen i Drive-mappen Madplan/inbox.</p></div></div>
     <div id="list"></div>
   </section>
+  <p class="foot">Lavet til familiens hverdag · varer og priser fra BilkaToGo · intet bestilles eller betales herfra</p>
 </main>
 <footer id="bar">
-  <div>
+  <div class="sum">
     <strong id="total">0 kr</strong>
-    <div class="meter"><div id="meterfill"></div></div>
+    <div class="meter" role="progressbar" aria-label="Minimumskøb"><div id="meterfill"></div></div>
     <small id="minimum"></small>
   </div>
   <button id="save">Gem indkøbsliste</button>

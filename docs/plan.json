@@ -429,7 +429,7 @@
      "minutes": 30,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 138.55,
      "offer_share": 0.27,
      "products": [
@@ -1035,7 +1035,7 @@
      "minutes": 30,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 164.81,
      "offer_share": 0.2,
      "products": [
@@ -2294,7 +2294,7 @@
      "minutes": 90,
      "source": "Bilka opskrifter",
      "kid": 2,
-     "family": "andet",
+     "family": "dansk",
      "cost": 131.44,
      "offer_share": 0.04,
      "products": [
@@ -3273,7 +3273,7 @@
      "minutes": 35,
      "source": "Ugens madplan",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 151.34,
      "offer_share": 0.0,
      "products": [
@@ -3426,7 +3426,7 @@
      "minutes": 40,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 100.8,
      "offer_share": 0.0,
      "products": [
@@ -3543,7 +3543,7 @@
      "minutes": 50,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 151.4,
      "offer_share": 0.02,
      "products": [
@@ -3703,7 +3703,7 @@
      "minutes": 40,
      "source": "Bilka opskrifter",
      "kid": 0,
-     "family": "andet",
+     "family": "dansk",
      "cost": 36.55,
      "offer_share": 0.44,
      "products": [
@@ -3866,7 +3866,7 @@
      "minutes": 40,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "andet",
+     "family": "dansk",
      "cost": 116.4,
      "offer_share": 0.0,
      "products": [

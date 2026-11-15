@@ -30,6 +30,8 @@ FAMILY = [  # for variety: no two mains of the same family on consecutive days
     ("burger", ["burger"]), ("pizza", ["pizza", "flammkuchen"]),
     ("fisk", ["fisk", "laks", "torsk", "rødspætte"]),
     ("kylling", ["kylling", "chicken"]), ("tex-mex", ["taco", "burrito", "wrap", "pita"]),
+    ("dansk", ["frikadelle", "karbonade", "hakkebøf", "tartelet", "boller i karry", "brændende", "flæskesteg",
+               "medister", "biksemad", "æggekage", "risengrød", "millionbøf", "frikassé", "kotelet"]),
 ]
 
 

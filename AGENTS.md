@@ -68,10 +68,10 @@ uses the store's private web APIs, and **cannot order or pay**.
 | Path | Role |
 |---|---|
 | `planner/mcp.py` | Minimal stdio MCP client for handle-mcp (pinned version, telemetry off). |
-| `planner/build_plan.py` | Collects Bilka recipes, prices them per person, scores and picks the week. Writes `docs/plan.json` and the archive `docs/plans/<week>.json` + `index.json`. |
+| `planner/build_plan.py` | Collects Bilka recipes, prices them per person, scores and picks the week (small bonus for dishes with a real photo). Adds normal prices and savings, and a real dish photo from the public recipe page (`page_photo`, https://www.bilkatogo.dk/ only, no login) when the recipe data has none. Writes `docs/plan.json` and the archive `docs/plans/<week>.json` + `index.json`. |
 | `planner/favourites.py` | Scoring words: `KID` (Danish children's favourites), `AVOID`, `FAMILY` (variety), `STAPLES` (pantry items, bought once). |
 | `planner/fill_cart.py` | Validates a list (schema, ids, qty 0-20) and sets absolute cart quantities, 50 per call. Writes the receipt. |
-| `docs/` | The static page (`index.html`, `app.js`, `style.css`, `img/`). Nothing is sent anywhere; choices are kept in the browser. |
+| `docs/` | The static page (`index.html`, `app.js`, `style.css`, `img/`, self-hosted OFL fonts in `fonts/`). Nothing is sent anywhere; choices are kept in the browser. |
 | `prompts/weekly_meal_plan.md` | The weekly agent's instructions and review checklist. |
 | `scripts/weekly_agent.sh` | Runs `claude -p` with that prompt and a least-privilege tool allowlist; logs to `~/Library/Logs/`. |
 | `scripts/scan_sensitive.py`, `.githooks/pre-commit`, `.github/workflows/scan.yml` | The safety gate (gitleaks + personal-data scan), locally and in CI. |

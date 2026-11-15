@@ -1,7 +1,7 @@
 # Weekly meal plan: agent prompt
 
 Prompt for the scheduled Claude agent that builds and publishes the week's dinner plan. Run it on the Mac, in
-this repo, once a week (Saturday or Sunday), so that `handle-mcp` can use the BilkaToGo login in the keychain.
+this repo, once a week (installed by `scripts/install_weekly_agent.py`: Saturday 12:00 by default), so that `handle-mcp` can use the BilkaToGo login in the keychain.
 
 ---
 
@@ -22,9 +22,8 @@ repository only.
 
 ## Steps
 
-1. Check the login: `uvx handle-mcp@1.8.0` must reach BilkaToGo. If the builder reports a login error, stop
-   and tell the human to run `uvx handle-mcp@1.8.0 login bilkatogo` themselves. Never handle a password.
-2. Build: `python3 -m planner.build_plan` (writes `docs/plan.json` and the archive in `docs/plans/`).
+1. Login: if the builder reports a BilkaToGo login error, stop and tell the human to run `uvx handle-mcp@1.8.0 login bilkatogo` themselves. Never handle a password.
+2. Build: `python3 -m planner.build_plan` (exactly this command) (writes `docs/plan.json` and the archive in `docs/plans/`).
 3. Review `docs/plan.json` against the checklist below.
 4. If the review passes, commit and push only `docs/plan.json` and `docs/plans/`:
    `git add docs/plan.json docs/plans && git commit -m "plan: <week>" && git push`
@@ -50,6 +49,6 @@ hand-edit `docs/plan.json`.
 
 ## Report (keep it short)
 
-- The week, the 7 main dinners, and the page link: https://thormtl.github.io/tmtl_meal_planner/
+- The week, the 7 main dinners, and the page link (`gh api repos/{owner}/{repo}/pages --jq .html_url`).
 - Estimated total, the share on offer, and anything you flagged.
 - Confirmation that the scans and deploy passed. If a step failed, what failed and what the human must do.

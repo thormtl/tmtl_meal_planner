@@ -2,9 +2,10 @@
 <html lang="da">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
-<meta name="theme-color" content="#f7f0e3">
+<meta name="theme-color" content="#f7f0e3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14272a" media="(prefers-color-scheme: dark)">
 <title>Ugens madplan</title>
 <link rel="icon" type="image/png" href="img/tmtl-chef-180.png">
 <link rel="apple-touch-icon" href="img/tmtl-chef-180.png">
@@ -24,32 +25,41 @@
 </header>
 <main>
   <p id="old" class="old" hidden>Tidligere uge, kun til inspiration: priser og tilbud gælder ikke længere.</p>
+  <ol class="steps" aria-label="Sådan virker det">
+    <li><b>1</b><span>Vælg ugens retter</span></li>
+    <li><b>2</b><span>Hent indkøbslisten</span></li>
+    <li><b>3</b><span>Læg filen i Drive › Madplan › inbox, så fylder robotten BilkaToGo-kurven</span></li>
+  </ol>
   <section id="days" aria-label="Ugens retter"></section>
 
   <section class="block">
-    <div class="block-head"><img src="img/dish-andet.webp" alt=""><div><h2>Faste varer</h2>
+    <div class="block-head"><span class="icon" aria-hidden="true">🥛</span><div><h2>Faste varer</h2>
       <p class="hint">Det I køber hver uge. Slå til og fra, ret antal.</p></div></div>
     <div id="basics"></div>
   </section>
   <section class="block">
-    <div class="block-head"><img src="img/dish-kylling.webp" alt=""><div><h2>Har I det hjemme?</h2>
+    <div class="block-head"><span class="icon" aria-hidden="true">🧂</span><div><h2>Har I det hjemme?</h2>
       <p class="hint">Salt, olie, bouillon og lignende fra opskrifterne. Sæt flueben, hvis I mangler det.</p></div></div>
     <div id="pantry"></div>
   </section>
   <section class="block">
-    <div class="block-head"><img src="img/dish-pizza.webp" alt=""><div><h2>Indkøbslisten</h2>
-      <p class="hint">Alt samlet. Gem den og læg filen i Drive-mappen Madplan/inbox.</p></div></div>
-    <div id="list"></div>
+    <div class="block-head"><span class="icon" aria-hidden="true">🧺</span><div><h2>Indkøbslisten</h2>
+      <p class="hint">Tryk »Hent indkøbsliste« og læg filen i Drive › Madplan › inbox. Robotten fylder kurven, I betaler selv.</p></div></div>
+    <details class="all" id="listwrap">
+      <summary id="listsum">Se alle varer</summary>
+      <div id="list"></div>
+    </details>
   </section>
   <p class="foot">Lavet til familiens hverdag · varer og priser fra BilkaToGo · intet bestilles eller betales herfra</p>
 </main>
 <footer id="bar">
   <div class="sum">
     <strong id="total">0 kr</strong>
-    <div class="meter" role="progressbar" aria-label="Minimumskøb"><div id="meterfill"></div></div>
-    <small id="minimum"></small>
+    <span class="lbl">i alt inkl. levering</span>
   </div>
-  <button id="save">Gem indkøbsliste</button>
+  <button id="save">Hent indkøbsliste</button>
+  <div class="meter" role="progressbar" aria-label="Minimumskøb" aria-valuemin="0"><div id="meterfill"></div></div>
+  <small id="minimum" aria-live="polite"></small>
 </footer>
 <script src="app.js"></script>
 </body>

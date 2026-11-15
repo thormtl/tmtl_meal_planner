@@ -122,6 +122,23 @@ def basics(h: Handle, cfg: dict) -> list[dict]:
     return out
 
 
+ARCHIVE = ROOT / "docs" / "plans"
+
+
+def archive(doc: dict) -> None:
+    """Keep every week's plan (docs/plans/<week>.json) + an index for the page's "Tidligere uger" menu.
+    A rebuild in the same week replaces that week's file."""
+    ARCHIVE.mkdir(parents=True, exist_ok=True)
+    (ARCHIVE / f"{doc['week']}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    weeks = []
+    for f in sorted(ARCHIVE.glob("*-W*.json"), reverse=True):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        weeks.append({"week": d["week"], "generated": d["generated"],
+                      "dinners": [day["options"][0]["name"] for day in d["days"]]})
+    (ARCHIVE / "index.json").write_text(json.dumps({"weeks": weeks}, ensure_ascii=False, indent=1) + "\n",
+                                        encoding="utf-8")
+
+
 def main() -> None:
     cfg = config.load()
     with Handle() as h:
@@ -150,8 +167,9 @@ def main() -> None:
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(plan)} days, {sum(len(d) for d in plan)} dinners, {len(base)} basics",
           file=sys.stderr)
+    archive(doc)
     if "--publish" in sys.argv:
-        subprocess.run(["git", "-C", ROOT, "add", "docs/plan.json"], check=True)
+        subprocess.run(["git", "-C", ROOT, "add", "docs/plan.json", "docs/plans"], check=True)
         subprocess.run(["git", "-C", ROOT, "commit", "-m", f"plan: {doc['week']}"], check=True)
         subprocess.run(["git", "-C", ROOT, "push"], check=True)
 

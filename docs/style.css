@@ -41,4 +41,8 @@ footer > div { flex: 1; min-width: 0; max-width: 520px; }
 .meter { height: 6px; background: var(--chip); border-radius: 3px; overflow: hidden; margin: 4px 0 2px; }
 #meterfill { height: 100%; width: 0; background: var(--accent); transition: width .2s; }
 #save { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px; padding: 12px 16px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.weekpick { display: inline-block; margin-top: 6px; color: var(--muted); font-size: .92rem; }
+.weekpick select { font-size: .95rem; margin-left: 4px; }
+.old { background: var(--chip); border-left: 4px solid var(--offer); padding: 8px 12px; border-radius: 8px; margin: 10px 0 0; }
+#save:disabled { opacity: .45; cursor: default; }
 input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--accent); }

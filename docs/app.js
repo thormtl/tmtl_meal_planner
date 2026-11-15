@@ -18,8 +18,21 @@ let plan, state;
 const KEY = () => "madplan:" + plan.week;
 const save = () => { try { localStorage.setItem(KEY(), JSON.stringify(state)); } catch {} };
 
+let current = null;  // this week's plan.json week; older weeks come from plans/<week>.json
+
 async function init() {
-  plan = await (await fetch("plan.json", { cache: "no-store" })).json();
+  const latest = await (await fetch("plan.json", { cache: "no-store" })).json();
+  current = latest.week;
+  const want = new URLSearchParams(location.search).get("uge");
+  plan = latest;
+  if (want && /^\d{4}-W\d{2}$/.test(want) && want !== current) {
+    try { plan = await (await fetch(`plans/${want}.json`, { cache: "no-store" })).json(); } catch { plan = latest; }
+  }
+  await weekMenu();
+  const old = plan.week !== current;
+  $("#old").hidden = !old;
+  $("#save").disabled = old;
+  $("#save").textContent = old ? "Kun inspiration" : "Gem indkøbsliste";
   let saved = null;
   try { saved = JSON.parse(localStorage.getItem(KEY()) || "null"); } catch {}
   state = saved || {
@@ -29,6 +42,23 @@ async function init() {
   };
   $("#meta").textContent = `Uge ${plan.week.split("-W")[1]} · BilkaToGo · ${plan.persons} personer · lavet ${plan.generated}`;
   render();
+}
+
+async function weekMenu() {
+  let weeks = [{ week: current, dinners: [] }];
+  try {
+    const idx = await (await fetch("plans/index.json", { cache: "no-store" })).json();
+    if (Array.isArray(idx.weeks) && idx.weeks.length) weeks = idx.weeks;
+  } catch {}
+  if (!weeks.some((w) => w.week === current)) weeks.unshift({ week: current, dinners: [] });
+  const sel = $("#week");
+  sel.replaceChildren(...weeks.map((w) => el("option", { value: w.week, ...(w.week === plan.week ? { selected: "" } : {}),
+    title: (w.dinners || []).join(", ") }, `${w.week.split("-W")[1]} (${w.week.slice(0, 4)})${w.week === current ? " · denne uge" : ""}`)));
+  sel.onchange = () => {
+    const u = new URL(location.href);
+    if (sel.value === current) u.searchParams.delete("uge"); else u.searchParams.set("uge", sel.value);
+    location.href = u.toString();
+  };
 }
 
 function render() {
@@ -132,6 +162,7 @@ function renderList() {
 }
 
 function download() {
+  if (plan.week !== current) return;  // archived weeks: product ids and prices are out of date
   const ls = lines();
   const doc = {
     schema: "tmtl-meal-planner/grocery-list@1",

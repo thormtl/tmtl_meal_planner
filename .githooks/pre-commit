@@ -1,0 +1,10 @@
+#!/bin/sh
+# HARD GATE (tmtl_meal_planner is public): no secrets, no personal data. Install: scripts/install-hooks.sh
+set -e
+root=$(git rev-parse --show-toplevel)
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "BLOCKED: gitleaks is not installed (brew install gitleaks). The scan is mandatory." >&2
+  exit 1
+fi
+gitleaks git --pre-commit --staged --redact --no-banner --exit-code 1 "$root"
+python3 "$root/scripts/scan_sensitive.py" --staged

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Ugens madplan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Ugens madplan</h1>
+  <p id="meta">Henter madplan…</p>
+</header>
+<main>
+  <section id="days"></section>
+  <section class="block">
+    <h2>Faste varer</h2>
+    <p class="hint">Det du køber hver uge. Slå til og fra, ret antal.</p>
+    <div id="basics"></div>
+  </section>
+  <section class="block">
+    <h2>Har du det hjemme?</h2>
+    <p class="hint">Krydderier, olie og lignende fra opskrifterne. Sæt flueben, hvis du mangler det.</p>
+    <div id="pantry"></div>
+  </section>
+  <section class="block">
+    <h2>Indkøbsliste</h2>
+    <div id="list"></div>
+  </section>
+</main>
+<footer id="bar">
+  <div>
+    <strong id="total">0 kr</strong>
+    <div class="meter"><div id="meterfill"></div></div>
+    <small id="minimum"></small>
+  </div>
+  <button id="save">Gem indkøbsliste</button>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

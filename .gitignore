@@ -1,0 +1,15 @@
+# Never commit local settings, shopping lists, receipts or secrets (HARD GATE, see scripts/scan_sensitive.py)
+.env
+.env.*
+*.pem
+*.key
+config.json
+denylist.txt
+bilkatogo-liste-*.json
+*kvittering*
+*receipt*
+*.fejl.md
+__pycache__/
+*.pyc
+.DS_Store
+.venv/

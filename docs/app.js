@@ -193,7 +193,7 @@ function download() {
   const blob = new Blob([JSON.stringify(doc, null, 1)], { type: "application/json" });
   const a = el("a", { href: URL.createObjectURL(blob), download: `bilkatogo-liste-${plan.week}.json` });
   document.body.append(a); a.click(); a.remove();
-  toast("Gemt ✓ Læg filen i Drive › Madplan › inbox");
+  toast("Gemt ✓ Læg den i Drive › Madplan › inbox");
 }
 
 function toast(msg) {

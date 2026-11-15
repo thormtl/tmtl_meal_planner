@@ -100,14 +100,14 @@ footer { position: fixed; left: 12px; right: 12px; bottom: 12px; max-width: 736p
 #total { font-size: 1.05rem; white-space: nowrap; display: block; overflow: hidden; text-overflow: ellipsis; }
 .meter { height: 8px; background: var(--cream); border-radius: 99px; overflow: hidden; margin: 5px 0 3px; }
 #meterfill { height: 100%; width: 0; background: linear-gradient(90deg, var(--mustard), var(--tomato)); border-radius: 99px; transition: width .25s; }
-#minimum { color: var(--muted); }
+#minimum { color: var(--muted); font-size: .8rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #save { flex: none; background: var(--tomato); color: #fff; border: 0; border-radius: 14px; padding: 13px 18px; font-size: 1rem; font-weight: 800;
   cursor: pointer; box-shadow: 0 6px 16px rgba(217, 72, 59, .35); }
 #save:disabled { opacity: .45; cursor: default; box-shadow: none; }
 @media (min-width: 720px) { .hero { min-height: 380px; } .photo { aspect-ratio: 16 / 7; } }
 
 /* saved toast */
-.toast { position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 20px); opacity: 0; z-index: 50; width: min(360px, calc(100% - 32px));
+.toast { position: fixed; left: 50%; bottom: 118px; transform: translate(-50%, 20px); opacity: 0; z-index: 50; width: min(360px, calc(100% - 32px));
   background: var(--teal); color: #fff; font-family: var(--round); font-weight: 700; padding: 12px 18px; border-radius: 16px;
   box-shadow: 0 10px 28px rgba(0,0,0,.25); transition: opacity .25s ease, transform .25s ease; text-align: center; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }

@@ -17,7 +17,7 @@ dinners on your phone, save the shopping list, and your Mac fills the BilkaToGo 
 2. **Choose** (any device): open the Pages site. Tap a swap per day, tick basics and pantry items, then press
    **Gem indkøbsliste**. That downloads `bilkatogo-liste-<week>.json`. Save it in your Google Drive
    `Madplan/inbox` folder.
-3. **Cart** (your Mac): a launchd watcher (`scripts/install_watcher.py`) sees the file and runs
+3. **Cart** (your Mac): a launchd watcher (`scripts/build_watcher_app.sh`) sees the file and runs
    `planner.fill_cart`, which sets the cart quantities. It writes a receipt (`*.kvittering.md`) to `Madplan/done`.
 4. **Pay** (you): open https://www.bilkatogo.dk/kurv, choose a delivery time and pay.
 
@@ -30,7 +30,7 @@ brew install gitleaks
 scripts/install-hooks.sh               # scan hooks + GitHub no-reply author email + personal denylist file
 python3 -m planner.config --init       # ~/.config/tmtl_meal_planner/config.json: persons, basics, Drive folders
 uvx handle-mcp@1.8.0 login bilkatogo   # your login, saved in the macOS keychain
-python3 scripts/install_watcher.py     # after setting inbox/done in the config
+scripts/build_watcher_app.sh          # after setting inbox/done in the config (see Watcher access)
 ```
 
 ## HARD GATE: nothing personal, nothing secret
@@ -48,12 +48,13 @@ Household details, local paths, shopping lists and receipts live only on your Ma
 
 ## Watcher access (macOS)
 
-macOS doesn't let background jobs read the Google Drive folder. Give the watcher's own Python access, once:
+macOS doesn't let background jobs read the Google Drive folder. Instead of Full Disk Access, the watcher runs
+through a tiny app, `Madplan Watcher.app`, built without Xcode by `osacompile` plus an ad-hoc signature:
 
-1. Create a dedicated copy, so the grant covers only this watcher:
-   ```sh
-   cp -R "$(dirname "$(dirname "$(uv python find 3.12)")")" ~/.local/share/tmtl_meal_planner/python
-   ```
-2. In **System Settings > Privacy & Security > Full Disk Access**, click **+**, press **Cmd+Shift+G**, paste
-   `~/.local/share/tmtl_meal_planner/python/bin/python3.12` and switch it on.
-3. Reload the watcher: `python3 scripts/install_watcher.py`. Its log is `~/Library/Logs/tmtl_meal_planner.log`.
+```sh
+scripts/build_watcher_app.sh   # builds ~/Applications/Madplan Watcher.app and installs the launchd watcher
+```
+
+The first time it runs, macOS asks: **"Madplan Watcher" would like to access files in Google Drive**. Click
+**Allow**. That grants Google Drive only, never the whole disk. A rebuild changes the signature, so macOS asks again.
+The log is `~/Library/Logs/tmtl_meal_planner.log`.

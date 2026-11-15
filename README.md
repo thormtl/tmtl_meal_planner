@@ -23,6 +23,12 @@ dinners on your phone, save the shopping list, and your Mac fills the BilkaToGo 
 
 The list file is meant for agents too: its `how_to_use` field explains exactly what to do with it.
 
+## The weekly agent
+
+The scheduled Claude agent follows [`prompts/weekly_meal_plan.md`](prompts/weekly_meal_plan.md): it builds the plan,
+reviews it (dinner only, quick, child-friendly, varied, uses the offers), publishes it and reports back.
+It never touches the cart and never bypasses the scans.
+
 ## Setup (once)
 
 ```sh

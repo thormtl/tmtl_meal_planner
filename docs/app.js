@@ -89,7 +89,8 @@ function renderDays() {
       photo,
       el("div", { class: "body" },
         el("h3", {}, m.name), pills,
-        m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskriften →") : ""),
+        m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskriften →") : "",
+        ingredients(m, i)),
       el("p", { class: "swaplabel" }, "Byt retten"),
       el("div", { class: "swaps" }, ...d.options.map((o, j) =>
         el("button", { "aria-pressed": String(j === state.pick[i]), title: o.name,
@@ -97,6 +98,30 @@ function renderDays() {
           el("img", { src: art(o), alt: "" }), el("span", {}, o.name)))));
     root.append(card);
   });
+}
+
+
+// fold-out ingredient overview: what the dinner needs, which parts are on offer, and the saving
+function ingredients(m, i) {
+  const buy = m.products.filter((p) => !p.pantry), home = m.products.filter((p) => p.pantry);
+  const offers = buy.filter((p) => p.offer).length, saving = m.saving || 0;
+  const open = state.open && state.open[i];
+  const summary = el("summary", {},
+    el("span", { class: "ing-title" }, `Ingredienser (${buy.length})`),
+    offers ? el("span", { class: "pill offer" }, `${offers} på tilbud`) : "",
+    saving >= 0.5 ? el("span", { class: "pill save" }, `spar ${kr(saving)}`) : "");
+  const row = (p, isHome) => el("li", { class: p.offer && !isHome ? "on-offer" : "" },
+    el("span", { class: "ing-name" }, `${p.qty > 1 ? p.qty + " × " : ""}${p.name}`, el("small", {}, p.size || "")),
+    el("span", { class: "ing-price" },
+      p.before && p.before > p.price ? el("s", {}, kr(p.before * p.qty)) : "",
+      el("b", {}, kr(p.price * p.qty)),
+      p.offer && !isHome ? el("em", {}, p.offer) : ""));
+  const d = el("details", { class: "ing", ...(open ? { open: "" } : {}),
+    on: { toggle: (e) => { state.open = state.open || {}; state.open[i] = e.target.open; save(); } } },
+    summary,
+    el("ul", {}, ...buy.map((p) => row(p, false))),
+    home.length ? el("p", { class: "ing-home" }, "Har I måske: " + home.map((p) => p.name).join(", ")) : "");
+  return d;
 }
 
 function stepper(get, set) {

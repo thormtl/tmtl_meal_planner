@@ -84,6 +84,33 @@ def priced(h: Handle, r: dict, persons: int) -> dict | None:
             "ingredients": d.get("ingredients", [])}
 
 
+def add_savings(h: Handle, plan: list[list[dict]]) -> None:
+    """Normal price + saving for every product on offer in the chosen dinners. get_recipe has only the offer price;
+    search_products returns before_price, matched on the product id. Multi-buy offers ("Mix 10 for 25,00") have no
+    before_price, so they keep the offer text without an amount."""
+    offered = {p["id"]: p["name"] for opts in plan for m in opts for p in m["products"] if p.get("offer")}
+    before: dict[str, float] = {}
+    for pid, name in offered.items():
+        try:
+            res = h.call("search_products", query=name, stores=["bilkatogo"])
+        except StoreError:
+            continue
+        hit = next((x for x in res if isinstance(x, dict) and str(x.get("id")) == pid), None) if isinstance(res, list) else None
+        if hit and hit.get("before_price"):
+            before[pid] = money(hit["before_price"])
+    for opts in plan:
+        for m in opts:
+            saving = 0.0
+            for p in m["products"]:
+                b = before.get(p["id"])
+                if b and b > p["price"]:
+                    p["before"] = b
+                    if not p["pantry"]:
+                        saving += (b - p["price"]) * p["qty"]
+            m["saving"] = round(saving, 2)
+            m["offer_count"] = sum(1 for p in m["products"] if p.get("offer") and not p["pantry"])
+
+
 def score(m: dict, max_min: int) -> float:
     quick = 1.0 if (m["minutes"] or 30) <= 30 else 0.5 if (m["minutes"] or 30) <= max_min else -2
     return 3 * m["kid"] + 2 * m["offer_share"] + quick + (0.5 if m["source"] == "Ugens madplan" else 0)
@@ -150,6 +177,7 @@ def main() -> None:
             if m:
                 m["score"] = round(score(m, cfg["max_minutes"]), 2); meals.append(m)
         plan = pick(meals, cfg["days"], cfg["alternatives"])
+        add_savings(h, plan)
         cart = h.call("get_cart", store="bilkatogo")
         base = basics(h, cfg)
     today = dt.date.today()

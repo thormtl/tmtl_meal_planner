@@ -14,6 +14,7 @@ const el = (tag, attrs = {}, ...kids) => {
   return e;
 };
 const lower = (s) => s.toLowerCase();
+const kr0 = (n) => Math.round(n).toLocaleString("da-DK") + " kr";
 
 let plan, state;
 const KEY = () => "madplan:" + plan.week;
@@ -35,14 +36,15 @@ async function init() {
   $("#old").hidden = !old;
   $("#save").disabled = old;
   $("#save").textContent = old ? "Kun inspiration" : "Hent indkøbsliste";
-  let saved = null;
-  try { saved = JSON.parse(localStorage.getItem(KEY()) || "null"); } catch {}
+  let saved = null, seen = false;
+  try { saved = JSON.parse(localStorage.getItem(KEY()) || "null"); seen = Object.keys(localStorage).some((k) => k.startsWith("madplan:")); } catch {}
+  $("#steps").open = !seen;
   state = saved || {
     pick: plan.days.map(() => 0),
     basics: plan.basics.map((b) => ({ on: true, choice: 0, qty: b.qty })),
     pantry: {},
   };
-  $("#meta").textContent = `Uge ${+plan.week.split("-W")[1]} · 7 aftener børnene kan lide · ${plan.persons} personer`;
+  $("#meta").textContent = `7 aftener børnene kan lide · ${plan.persons} personer`;
   $("#listwrap").addEventListener("toggle", (e) => { state.listOpen = e.target.open; save(); });
   if (state.listOpen) $("#listwrap").open = true;
   render();
@@ -69,7 +71,7 @@ async function weekMenu() {
 function render(keepSaved = false) {
   if (!keepSaved) justSaved = false;
   const key = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.key : null;
-  renderDays(); renderBasics(); renderPantry(); renderList();
+  renderWeek(); renderDays(); renderBasics(); renderPantry(); renderList();
   if (key) { const n = document.querySelector(`[data-key="${key}"]`); if (n) n.focus({ preventScroll: true }); }
 }
 const changed = () => { save(); render(); };
@@ -78,11 +80,15 @@ const ART = { pasta: "pasta", burger: "burger", pizza: "pizza", fisk: "fisk", ky
   "tex-mex": "texmex", dansk: "dansk", andet: "andet" };
 const art = (m) => `img/dish-${ART[m.family] || "andet"}.webp`;
 
+// real dish photo (BilkaToGo) when there is one; small versions via the image CDN's width parameter
+const photoUrl = (m, w) => (m.image ? m.image.replace(/\/w_\d+,/, `/w_${w},`) : null);
+const thumb = (m) => photoUrl(m, 200) || art(m);
+
 function photoOf(m, i, extra) {
   const hasImg = !!m.image;
   return el("div", { class: "photo" },
     hasImg
-      ? el("img", { class: "dish-photo", src: m.image, alt: m.name, loading: i < 2 ? "eager" : "lazy", referrerpolicy: "no-referrer",
+      ? el("img", { class: "dish-photo", src: photoUrl(m, 800), alt: m.name, loading: i < 2 ? "eager" : "lazy", referrerpolicy: "no-referrer",
           on: { error: (e) => { const ph = e.target.parentNode; e.target.replaceWith(el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" })));
             const b = ph.querySelector(".badge-art"); if (b) b.remove(); ph.closest(".day")?.classList.remove("has-badge"); } } })
       : el("div", { class: "art-only" }, el("img", { src: art(m), alt: "" })),
@@ -91,57 +97,66 @@ function photoOf(m, i, extra) {
     hasImg ? el("span", { class: "badge-art" }, el("img", { src: art(m), alt: "" })) : "");
 }
 
+function renderWeek() {
+  $("#weekstrip").replaceChildren(...plan.days.map((d, i) => {
+    const cov = covered(i), m = cov ? dishFor(i - 1) : dishFor(i);
+    return el("a", { href: `#day-${i}`, class: (cov ? "covered" : "") + (mult(i) > 1 ? " doubled" : ""),
+      "aria-label": `${d.day}: ${cov ? "rester" : m.name}` },
+      el("img", { src: thumb(m), alt: "", referrerpolicy: "no-referrer", loading: "lazy" }), d.day.slice(0, 3));
+  }));
+}
+
+function swapTile(m, attrs) {
+  return el("button", { title: m.name, ...attrs },
+    el("img", { src: thumb(m), alt: "", referrerpolicy: "no-referrer", loading: "lazy" }), el("span", {}, m.name));
+}
+
 function renderDays() {
   const root = $("#days"); root.replaceChildren();
   const moved = displaced();
   plan.days.forEach((d, i) => {
-    if (covered(i)) {   // this day eats yesterday's leftovers: show yesterday's dish, nothing is bought
+    if (covered(i)) {   // this day eats yesterday's leftovers: slim card, nothing is bought
       const src = dishFor(i - 1), mine = own(i), prev = lower(plan.days[i - 1].day);
-      root.append(el("article", { class: "day covered" + (src.image ? " has-badge" : "") },
+      root.append(el("article", { id: `day-${i}`, class: "day covered" },
         photoOf(src, i, el("span", { class: "leftover-tag" }, `🍲 Rester fra ${prev}`)),
         el("div", { class: "body" },
           el("h3", {}, `Rester: ${src.name}`),
-          el("p", { class: "hint" }, `${mine.name} er sprunget over i indkøbslisten. Alle 4 retter fra ${lower(d.day)} kan vælges på de andre dage under »Lån fra ${lower(d.day)}«.`),
-          el("button", { class: "lo-btn undo", "data-key": `day${i}-undo`, on: { click: () => setLeftover(i - 1, false) } },
-            `↺ Lav ${lower(mine.name)} ${lower(d.day)} alligevel`))));
+          el("p", { class: "hint" }, `${mine.name} købes ikke ind. Vil I stadig have den? Vælg den en anden dag under »Lån fra ${lower(d.day)}«.`),
+          el("button", { class: "linkbtn", "data-key": `day${i}-undo`, on: { click: () => setLeftover(i - 1, false) } },
+            `Fortryd: lav ${lower(mine.name)} ${lower(d.day)} alligevel`))));
       return;
     }
     const m = dishFor(i), x = mult(i), saving = dishSaving(m, x);
-    const pills = el("div", { class: "pills" },
-      el("span", { class: "pill" }, `⏱ ${m.time || "?"}`),
-      el("span", { class: "pill" }, `ca. ${kr(m.cost * x)}`),
-      x > 1 ? el("span", { class: "pill double" }, "Dobbelt portion") : "",
-      saving >= 0.5 ? el("span", { class: "pill offer" }, `spar ca. ${kr(saving)}`) : "",
-      m.kid >= 3 ? el("span", { class: "pill kids" }, "Børnefavorit") : "");
     const next = i < plan.days.length - 1 ? lower(plan.days[i + 1].day) : null;
     const lo = next ? el("button", { class: "lo-btn", "data-key": `day${i}-lo`, "aria-pressed": String(!!LO()[i]),
-      title: `Lav dobbelt portion, så ${next} er rester. ${next[0].toUpperCase() + next.slice(1)}s ret kan vælges en anden dag.`,
-      on: { click: () => setLeftover(i, !LO()[i]) } },
-      LO()[i] ? `✓ Dobbelt portion · rester til ${next}` : `🍲 Lav dobbelt · rester til ${next}`) : "";
+      title: `Lav dobbelt portion, så ${next} er rester.`, on: { click: () => setLeftover(i, !LO()[i]) } },
+      LO()[i] ? `✓ Dobbelt · rester ${next}` : `🍲 Lav dobbelt`) : "";
     const b = BR()[i];
-    const ownBtns = d.options.map((o, j) =>
-      el("button", { "data-key": `day${i}-opt${j}`, "aria-pressed": String(!b && j === state.pick[i]), title: o.name,
-        on: { click: () => { state.pick[i] = j; delete BR()[i]; changed(); } } },
-        el("img", { src: art(o), alt: "" }), el("span", {}, o.name)));
+    const ownBtns = d.options.map((o, j) => [o, j]).filter(([, j]) => b || j !== state.pick[i]).map(([o, j]) =>
+      swapTile(o, { "data-key": `day${i}-opt${j}`, "aria-pressed": "false",
+        on: { click: () => { state.pick[i] = j; delete BR()[i]; changed(); } } }));
     // all dinners of a leftover day can be borrowed by any other day (also the one cooking double: then that dish is doubled)
-    const borrowGroups = [...new Set(moved.map((mv) => mv.d))].filter((dd) => dd !== i).map((dd) => [
-      el("p", { class: "swaplabel borrowlabel" }, `Lån fra ${lower(plan.days[dd].day)} (rester-dag)`),
-      el("div", { class: "swaps" }, ...moved.filter((mv) => mv.d === dd).map((mv) =>
-        el("button", { class: "borrow", "data-key": `day${i}-borrow${mv.d}-${mv.o}`, "aria-pressed": String(!!b && b.d === mv.d && b.o === mv.o),
-          title: mv.m.name, on: { click: () => { BR()[i] = { d: mv.d, o: mv.o }; changed(); } } },
-          el("img", { src: art(mv.m), alt: "" }), el("span", {}, mv.m.name))))]).flat();
-    root.append(el("article", { class: "day" + (x > 1 ? " doubled" : "") + (m.image ? " has-badge" : "") },
+    const borrowBoxes = [...new Set(moved.map((mv) => mv.d))].filter((dd) => dd !== i).map((dd) => {
+      const mine = moved.filter((mv) => mv.d === dd), active = !!b && b.d === dd;
+      return el("details", { class: "borrowbox", ...(active ? { open: "" } : {}) },
+        el("summary", { "data-key": `day${i}-borrowbox${dd}` }, `Lån fra ${lower(plan.days[dd].day)} (${mine.length} retter)`),
+        el("div", { class: "swaps" }, ...mine.map((mv) => swapTile(mv.m, { class: "borrow", "data-key": `day${i}-borrow${mv.d}-${mv.o}`,
+          "aria-pressed": String(active && b.o === mv.o), on: { click: () => { BR()[i] = { d: mv.d, o: mv.o }; changed(); } } }))));
+    });
+    root.append(el("article", { id: `day-${i}`, class: "day" + (x > 1 ? " doubled" : "") + (m.image ? " has-badge" : "") },
       photoOf(m, i),
       el("div", { class: "body" },
-        el("h3", {}, m.name), pills,
+        el("h3", {}, m.name, m.kid >= 3 ? el("span", { class: "fav", title: "Børnefavorit", "aria-label": "Børnefavorit" }, "♥") : ""),
+        el("p", { class: "facts" }, `${m.time || "?"} · ca. ${kr0(m.cost * x)}${x > 1 ? " (dobbelt)" : ""}`,
+          saving >= 0.5 ? el("span", { class: "pill offer" }, `spar ${kr0(saving)}`) : ""),
         el("div", { class: "actions" },
-          m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Se opskriften →") : "",
+          m.url ? el("a", { class: "recipe", href: m.url, target: "_blank", rel: "noopener noreferrer" }, "Opskrift →") : "",
           lo),
-        LO()[i] ? el("p", { class: "lo-hint" }, `${next[0].toUpperCase() + next.slice(1)} er rester, så den dag købes der ikke ind til.`) : "",
+        LO()[i] ? el("p", { class: "lo-hint" }, `${next[0].toUpperCase() + next.slice(1)}: rester, ingen indkøb.`) : "",
         ingredients(m, i, x)),
-      el("p", { class: "swaplabel" }, "Byt retten"),
+      el("p", { class: "swaplabel" }, b ? "Tilbage til dagens egne retter" : "Byt retten"),
       el("div", { class: "swaps" }, ...ownBtns),
-      ...borrowGroups));
+      ...borrowBoxes));
   });
 }
 
@@ -195,7 +210,7 @@ function renderBasics() {
         el("select", { "data-key": `basic${i}-sel`, "aria-label": `Vælg vare: ${b.search}`, on: { change: (e) => { s.choice = +e.target.value; changed(); } } },
           ...b.choices.map((ch, j) => el("option", { value: j, ...(j === s.choice ? { selected: "" } : {}) },
             `${ch.name} ${ch.size || ""}${ch.offer ? " · tilbud" : ""}`))),
-        c.offer ? el("small", { class: "tag" }, c.offer) : ""),
+        c.offer ? el("small", { class: "tag", title: c.offer }, c.offer.split(" (")[0]) : ""),
       stepper(`basic${i}`, c.name, () => (s.on ? s.qty : 0), (v) => { s.qty = v; s.on = v > 0; changed(); }),
       el("span", { class: "price" }, kr(c.price * (s.on ? s.qty : 0)))));
   });
@@ -272,14 +287,18 @@ const feeTotal = () => Object.values(plan.fees || {}).reduce((a, v) => a + (+v |
 
 function renderList() {
   const ls = lines(), items = ls.reduce((a, l) => a + l.price * l.qty, 0), fees = feeTotal(), total = items + fees;
+  const groups = new Map();
+  for (const l of ls) { const g = l.for[0]; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(l); }
   $("#list").replaceChildren(
-    ...ls.map((l) => el("div", { class: "row" },
-      el("div", { class: "name" }, `${l.qty} × ${l.name}`, el("small", {}, `${l.size || ""} · ${l.for.join(", ")}`)),
-      el("span", { class: "price" }, kr(l.price * l.qty)))),
+    ...[...groups].flatMap(([g, rows]) => [el("p", { class: "group" }, g),
+      ...rows.map((l) => el("div", { class: "row" },
+        el("div", { class: "name" }, `${l.qty} × ${l.name}`,
+          el("small", {}, [l.size, l.for.length > 1 ? "også: " + l.for.slice(1).join(", ") : ""].filter(Boolean).join(" · "))),
+        el("span", { class: "price" }, kr(l.price * l.qty))))]),
     fees ? el("div", { class: "row" }, el("div", { class: "name" }, "Levering og pakning", el("small", {}, "BilkaToGo-gebyrer")),
       el("span", { class: "price" }, kr(fees))) : "");
   $("#listsum").textContent = `Se alle varer (${ls.length})`;
-  $("#total").textContent = `ca. ${kr(total)}`;
+  $("#total").textContent = `ca. ${kr0(total)}`;
   const min = plan.minimum_order || 0;                     // BilkaToGo's minimum counts everything incl. fees
   const meter = $(".meter");
   meter.setAttribute("aria-valuemax", String(min || 1));
@@ -287,9 +306,10 @@ function renderList() {
   meter.setAttribute("aria-valuetext", min && total < min ? `${kr(min - total)} mangler til minimumskøb` : "Minimumskøb nået");
   $("#meterfill").style.width = min ? Math.min(100, (total / min) * 100) + "%" : "100%";
   const m = $("#minimum");
+  $("#bar").classList.toggle("ok", !!min && total >= min && !justSaved);
   m.classList.toggle("saved", justSaved);
   m.textContent = justSaved ? "Hentet ✓ Læg filen i Drive › Madplan › inbox"
-    : `${ls.length} varer + levering ${kr(fees)} · ` + (min && total < min ? `${kr(min - total)} til min.køb` : "min.køb nået ✓");
+    : `${ls.length} varer · levering ${kr0(fees)}` + (min && total < min ? ` · mangler ${kr0(min - total)} til min.køb` : "");
 }
 
 function download() {
@@ -314,7 +334,7 @@ function download() {
   const a = el("a", { href: URL.createObjectURL(blob), download: `bilkatogo-liste-${plan.week}.json` });
   document.body.append(a); a.click(); a.remove();
   justSaved = true; renderList();
-  toast("Listen er hentet ✓ Læg filen i Drive › Madplan › inbox");
+  toast("Listen er hentet ✓");
 }
 
 function toast(msg) {

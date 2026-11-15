@@ -14,6 +14,7 @@ import json
 import pathlib
 import re
 import subprocess
+import urllib.request
 import sys
 
 from planner import config
@@ -141,9 +142,30 @@ def add_savings(h: Handle | None, plan: list[list[dict]]) -> None:
             m["offer_count"] = sum(1 for p in m["products"] if p.get("offer") and not p["pantry"])
 
 
+PAGE_IMG = re.compile(r"<img[^>]+>", re.I)
+
+
+def page_photo(url: str | None) -> str | None:
+    """Real dish photo from the public recipe page when get_recipe has none: the first full-width Salling image
+    (the recipe hero, w_1000+). Public page, no login; only https://www.bilkatogo.dk/ URLs are fetched."""
+    if not url or not url.startswith("https://www.bilkatogo.dk/"):
+        return None
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh) tmtl_meal_planner"})
+        html = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", "replace")
+    except Exception:  # noqa: BLE001  a missing photo never breaks the build
+        return None
+    for tag in PAGE_IMG.findall(html):
+        m = re.search(r'src="(https://digitalassets\.sallinggroup\.com/image/upload/w_(\d+)[^"]+)"', tag)
+        if m and int(m.group(2)) >= 1000:
+            return re.sub(r"/w_\d+,dpr_\d+,", "/w_1000,dpr_1,", m.group(1))
+    return None
+
+
 def score(m: dict, max_min: int) -> float:
     quick = 1.0 if (m["minutes"] or 30) <= 30 else 0.5 if (m["minutes"] or 30) <= max_min else -2
-    return 3 * m["kid"] + 2 * m["offer_share"] + quick + (0.5 if m["source"] == "Ugens madplan" else 0)
+    photo = 0.3 if m.get("image") else 0  # Thor: strive for a real photo of every dish
+    return 3 * m["kid"] + 2 * m["offer_share"] + quick + photo + (0.5 if m["source"] == "Ugens madplan" else 0)
 
 
 def pick(meals: list[dict], days: int, alts: int) -> list[list[dict]]:
@@ -208,6 +230,10 @@ def main() -> None:
                 m["score"] = round(score(m, cfg["max_minutes"]), 2); meals.append(m)
         plan = pick(meals, cfg["days"], cfg["alternatives"])
         add_savings(h, plan)
+        for opts in plan:
+            for m in opts:
+                if not m.get("image"):
+                    m["image"] = page_photo(m.get("url"))
         cart = h.call("get_cart", store="bilkatogo")
         base = basics(h, cfg)
     today = dt.date.today()

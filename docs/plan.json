@@ -1,8 +1,8 @@
 {
  "schema": "tmtl-meal-planner/plan@1",
  "store": "bilkatogo",
- "week": "2026-W47",
- "generated": "2026-11-15",
+ "week": "2026-W48",
+ "generated": "2026-11-21",
  "persons": 4,
  "cart_url": "https://www.bilkatogo.dk/kurv",
  "minimum_order": 500.0,
@@ -15,147 +15,13 @@
    "day": "Mandag",
    "options": [
     {
-     "id": "aftensmad/pastaretter/one-pot-bolognese-med-oksekoed",
-     "name": "One pot bolognese med oksekød",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/one-pot-bolognese-med-oksekoed/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fit,q_auto,f_auto,e_sharpen:1/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:e0d0e79f-87ae-482d-98c5-8c82ef142a2d",
-     "time": "30 min",
-     "minutes": 30,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "pasta",
-     "cost": 122.89,
-     "offer_share": 0.32,
-     "products": [
-      {
-       "id": "179676",
-       "name": "Bacon i tern",
-       "size": "500 g",
-       "price": 39.0,
-       "qty": 1,
-       "offer": "Tilbud, før 47,25 kr",
-       "pantry": false,
-       "before": 47.25
-      },
-      {
-       "id": "63753",
-       "name": "Squash øko",
-       "size": "1 stk",
-       "price": 9.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "37982",
-       "name": "Gulerødder øko",
-       "size": "1 kg",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "166050",
-       "name": "Pasta Linguine",
-       "size": "500 g",
-       "price": 17.98,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "117029",
-       "name": "Grøntsagsbouillon",
-       "size": "100 g",
-       "price": 5.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "119482",
-       "name": "Hakkede tomater øko",
-       "size": "400 g",
-       "price": 6.91,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129174",
-       "name": "Basilikum",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18305",
-       "name": "Løg",
-       "size": "1 kg",
-       "price": 12.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      }
-     ],
-     "ingredients": [
-      "500 g. Mesterhakket oksekød",
-      "1 løg",
-      "1 fed hvidløg",
-      "1 pk bacontern",
-      "250 g pasta",
-      "2 ds hakkede tomater",
-      "1 squash",
-      "2 store gulerødder",
-      "1 håndfuld frisk basilikum",
-      "Salt og peber",
-      "0,5 L grøntsagsbouillon",
-      "Forberedelsestid ca. 20 min.",
-      "Tilberedning ca. 10-15 min."
-     ],
-     "score": 10.64,
-     "saving": 8.25,
-     "offer_count": 1
-    },
-    {
      "id": "aftensmad/tilbehoer/squashfrikadeller",
      "name": "Squashfrikadeller",
      "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/tilbehoer/squashfrikadeller/",
      "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:da655546-eee4-4e36-9630-60ddcba18baa",
      "time": "30 min",
      "minutes": 30,
-     "source": "Bilka opskrifter",
+     "source": "Ugens madplan",
      "kid": 3,
      "family": "dansk",
      "cost": 164.81,
@@ -317,7 +183,7 @@
        "size": "65 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
        "pantry": true,
        "before": 12.25
       }
@@ -349,323 +215,9 @@
       "2 spsk. olie",
       "Lidt salt"
      ],
-     "score": 10.4,
+     "score": 11.2,
      "saving": 10.9,
      "offer_count": 3
-    },
-    {
-     "id": "aftensmad/pastaretter/pasta-alfredo",
-     "name": "Pasta alfredo",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/pasta-alfredo/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:0eb44f24-b021-4901-96ca-b9940f77e5a3",
-     "time": "20 min",
-     "minutes": 20,
-     "source": "Ugens madplan",
-     "kid": 2,
-     "family": "pasta",
-     "cost": 100.39,
-     "offer_share": 0.0,
-     "products": [
-      {
-       "id": "162740",
-       "name": "Fettuccine",
-       "size": "250 g",
-       "price": 16.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "132804",
-       "name": "Piskefløde 36% fedt",
-       "size": "250 ml",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "170956",
-       "name": "Parmigiano Reggiano",
-       "size": "125 g",
-       "price": 35.94,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "125811",
-       "name": "Saltet smør",
-       "size": "200 g",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      }
-     ],
-     "ingredients": [
-      "300 g pasta / spaghetti",
-      "1 stort fed hvidløg",
-      "1 spsk. smør",
-      "Godt med salt og peber",
-      "1 dl pastavand",
-      "1 dl fløde",
-      "100 g parmesanost",
-      "Ekstra parmesan til servering",
-      "Evt. persille eller timian til servering",
-      "Evt. lidt citronskal til servering"
-     ],
-     "score": 7.5,
-     "saving": 0.0,
-     "offer_count": 0
-    },
-    {
-     "id": "aftensmad/sandwiches-pita-og-wraps/pita/kartoffelwrap",
-     "name": "Kartoffelwrap",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/sandwiches-pita-og-wraps/pita/kartoffelwrap/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fit,q_auto,f_auto,e_sharpen:1/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:339eba53-a3c8-44d1-bddd-0ed80939b351",
-     "time": "30 min",
-     "minutes": 30,
-     "source": "Bilka opskrifter",
-     "kid": 2,
-     "family": "tex-mex",
-     "cost": 46.1,
-     "offer_share": 0.0,
-     "products": [
-      {
-       "id": "140787",
-       "name": "Revet mozzarella 22% fedt",
-       "size": "200 g",
-       "price": 14.35,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "85235",
-       "name": "Basilikumspesto",
-       "size": "190 g",
-       "price": 10.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "50956",
-       "name": "Rucola salat øko",
-       "size": "75 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "138030",
-       "name": "Rødløg",
-       "size": "500 g",
-       "price": 8.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18380",
-       "name": "Tomater",
-       "size": "1 stk",
-       "price": 3.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      }
-     ],
-     "ingredients": [
-      "Ca. 2 kartofler",
-      "1 lille håndfuld revet ost",
-      "Salt og peber",
-      "1 tsk pesto",
-      "Lidt ruccola",
-      "1/2 avocado",
-      "Lidt rødløg",
-      "1/2 tomat"
-     ],
-     "score": 7.0,
-     "saving": 0.0,
-     "offer_count": 0
-    }
-   ]
-  },
-  {
-   "day": "Tirsdag",
-   "options": [
-    {
-     "id": "aftensmad/danske-retter/tarteletter",
-     "name": "Tarteletter",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/tarteletter/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:65d72192-bc6a-436e-8c17-8baa6dbedec5",
-     "time": "20-30 min",
-     "minutes": 30,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "dansk",
-     "cost": 138.55,
-     "offer_share": 0.27,
-     "products": [
-      {
-       "id": "54720",
-       "name": "Hele hvide asparges øko",
-       "size": "130 g",
-       "price": 20.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": false,
-       "before": 28.95
-      },
-      {
-       "id": "92952",
-       "name": "Luksus tarteletter",
-       "size": "225 g",
-       "price": 18.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": false,
-       "before": 23.25
-      },
-      {
-       "id": "169794",
-       "name": "Kyllingebrystfilet",
-       "size": "650 g",
-       "price": 64.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "117003",
-       "name": "Hønsebouillon",
-       "size": "100 g",
-       "price": 5.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "84121",
-       "name": "Minimælk 0,4% fedt",
-       "size": "1 l",
-       "price": 10.6,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "18380",
-       "name": "Tomater",
-       "size": "1 stk",
-       "price": 3.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "61090",
-       "name": "Agurk øko",
-       "size": "1 stk",
-       "price": 12.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "10 tarteletskaller",
-      "500 g kyllingebryst eller hønsekød fra frost",
-      "Vand til kogning",
-      "1 bouillonterning",
-      "2 spsk. smør",
-      "3 spsk. hvedemel",
-      "4 dl mælk",
-      "3 dl kogevand fra kyllingen",
-      "200 g hvide asparges (på glas eller dåse)",
-      "godt med salt og peber",
-      "Top evt. med agurk, tomat og persille"
-     ],
-     "score": 10.54,
-     "saving": 14.2,
-     "offer_count": 2
     },
     {
      "id": "aftensmad/burger/smash-burgers-med-oksekoed",
@@ -677,8 +229,8 @@
      "source": "Bilka opskrifter",
      "kid": 3,
      "family": "burger",
-     "cost": 148.4,
-     "offer_share": 0.09,
+     "cost": 172.4,
+     "offer_share": 0.21,
      "products": [
       {
        "id": "155975",
@@ -693,10 +245,11 @@
        "id": "103715",
        "name": "Brioche burgerbolle",
        "size": "200 g",
-       "price": 18.0,
+       "price": 22.0,
        "qty": 1,
-       "offer": null,
-       "pantry": false
+       "offer": "Tilbud, før 23,25 kr",
+       "pantry": false,
+       "before": 23.25
       },
       {
        "id": "87187",
@@ -755,6 +308,15 @@
        "qty": 1,
        "offer": null,
        "pantry": false
+      },
+      {
+       "id": "18452",
+       "name": "Crispsalat",
+       "size": "1 stk",
+       "price": 20.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
       }
      ],
      "ingredients": [
@@ -769,9 +331,9 @@
       "Salat",
       "Evt. også en burgerpresser"
      ],
-     "score": 10.18,
-     "saving": 0.0,
-     "offer_count": 1
+     "score": 10.42,
+     "saving": 1.25,
+     "offer_count": 2
     },
     {
      "id": "aftensmad/mexicanske-retter/burritos",
@@ -910,7 +472,7 @@
        "size": "50 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 10,25 kr",
+       "offer": "Tilbud, før 10,25 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 10.25
       },
@@ -938,7 +500,7 @@
        "size": "60 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 11,00 kr",
+       "offer": "Tilbud, før 11,00 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 11.0
       }
@@ -964,107 +526,23 @@
       "Salt og peber",
       "Et drys chilipulver eller lidt af en frisk chili"
      ],
-     "score": 7.36,
+     "score": 7.66,
      "saving": 11.2,
      "offer_count": 3
     },
     {
-     "id": "aftensmad/sandwiches-pita-og-wraps/sandwiches/croque-madame",
-     "name": "Croque madame",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/sandwiches-pita-og-wraps/sandwiches/croque-madame/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:3ab80d0c-1026-42da-8c81-7e353b56f907",
-     "time": "20 min",
-     "minutes": 20,
-     "source": "Ugens madplan",
-     "kid": 1,
-     "family": "andet",
-     "cost": 170.84,
-     "offer_share": 0.21,
+     "id": "aftensmad/danske-retter/flaeskesteg",
+     "name": "Flæskesteg",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/flaeskesteg/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:7c024b28-75f1-4cef-b45e-1e215ccaa533",
+     "time": "90 min",
+     "minutes": 90,
+     "source": "Bilka opskrifter",
+     "kid": 2,
+     "family": "dansk",
+     "cost": 132.9,
+     "offer_share": 0.0,
      "products": [
-      {
-       "id": "103717",
-       "name": "Brioche sandwich skiveskåret",
-       "size": "500 g",
-       "price": 26.0,
-       "qty": 1,
-       "offer": "Tilbud, før 28,98 kr (avisen: Protein Lab Protein fladbrød, Salling Princip sliders, bagels eller hotdogbrød)",
-       "pantry": false,
-       "before": 28.98
-      },
-      {
-       "id": "104680",
-       "name": "Kogt italiensk skinke i skiver",
-       "size": "100 g",
-       "price": 46.14,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "116414",
-       "name": "Prima Donna",
-       "size": "220 g",
-       "price": 52.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "125887",
-       "name": "Økologiske æg S",
-       "size": "4 stk",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18359",
-       "name": "Forårsløg i bundt",
-       "size": "1 stk",
-       "price": 9.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "111016",
-       "name": "Mayonnaise",
-       "size": "400 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "111003",
-       "name": "Sød fransk sennep",
-       "size": "400 g",
-       "price": 10.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93858",
-       "name": "Hele muskatnødder",
-       "size": "5 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": false,
-       "before": 19.55
-      },
-      {
-       "id": "93846",
-       "name": "Chiliflager",
-       "size": "45 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 11,25 kr",
-       "pantry": true,
-       "before": 11.25
-      },
       {
        "id": "16868",
        "name": "Fint salt m. jod",
@@ -1075,55 +553,74 @@
        "pantry": true
       },
       {
+       "id": "33757",
+       "name": "Smør øko",
+       "size": "200 g",
+       "price": 22.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
        "id": "93861",
        "name": "Stødt sort peber",
        "size": "65 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
        "pantry": true,
        "before": 12.25
-      }
-     ],
-     "ingredients": [
-      "8 stykker toastbrød",
-      "1,5 dl mayonnaise",
-      "3 spsk. sød sennep",
-      "½ tsk. muskatnød, revet",
-      "Salt, peber",
-      "4 spsk. primadonna ost, revet",
-      "4 gode stykker skinke",
-      "4 æg",
-      "Salt, peber og chiliflager",
-      "Lidt forårsløg til toppen"
-     ],
-     "score": 4.92,
-     "saving": 12.53,
-     "offer_count": 2
-    }
-   ]
-  },
-  {
-   "day": "Onsdag",
-   "options": [
-    {
-     "id": "aftensmad/fiskeretter/fiskefrikadeller",
-     "name": "Fiskefrikadeller",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/fiskeretter/fiskefrikadeller/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:ca2c5d9a-9996-4350-94df-7403ee06c215",
-     "time": "30 min",
-     "minutes": 30,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "fisk",
-     "cost": 136.16,
-     "offer_share": 0.17,
-     "products": [
+      },
       {
-       "id": "38018",
-       "name": "Dild",
+       "id": "18619",
+       "name": "Rødkål øko",
        "size": "1 stk",
-       "price": 10.0,
+       "price": 18.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38149",
+       "name": "Appelsiner",
+       "size": "1 stk",
+       "price": 7.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "41701",
+       "name": "Stenfrie grønne druer",
+       "size": "500 g",
+       "price": 26.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "42528",
+       "name": "Granatæbler",
+       "size": "1 stk",
+       "price": 16.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "154977",
+       "name": "Valnøddekerner",
+       "size": "80 g",
+       "price": 12.0,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -1138,163 +635,42 @@
        "pantry": true
       },
       {
-       "id": "111016",
-       "name": "Mayonnaise",
-       "size": "400 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "111003",
-       "name": "Sød fransk sennep",
-       "size": "400 g",
-       "price": 10.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "85163",
-       "name": "Creme fraiche 18% fedt øko",
-       "size": "200 g",
-       "price": 13.16,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "63861",
-       "name": "Karry",
-       "size": "90 g",
-       "price": 6.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "38636",
-       "name": "Citron",
-       "size": "1 stk",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18309",
-       "name": "Løg øko",
+       "id": "17373",
+       "name": "Lys sirup",
        "size": "750 g",
-       "price": 14.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "37982",
-       "name": "Gulerødder øko",
-       "size": "1 kg",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "110606",
-       "name": "Syltede agurker",
-       "size": "190 g",
-       "price": 20.0,
-       "qty": 1,
-       "offer": "Tilbud, før 24,95 kr",
-       "pantry": false,
-       "before": 24.95
-      },
-      {
-       "id": "37953",
-       "name": "Rødbeder øko",
-       "size": "1 kg",
-       "price": 14.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18379",
-       "name": "Æbler",
-       "size": "1 stk",
-       "price": 2.75,
-       "qty": 1,
-       "offer": "Mix 10 for 25,00",
-       "pantry": false,
-       "multi": {
-        "n": 10,
-        "total": 25.0
-       }
-      },
-      {
-       "id": "170888",
-       "name": "Rosiner øko",
-       "size": "250 g",
-       "price": 16.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93865",
-       "name": "Solsikkekerner",
-       "size": "400 g",
-       "price": 13.25,
+       "price": 20.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       }
      ],
      "ingredients": [
-      "1 pakke fiskefars",
-      "Lidt ekstra frisk dild",
-      "3 spsk. olie til stegning",
-      "3 spsk. mayonnaise",
-      "1 spsk. sød sennep",
-      "3 spsk. creme fraiche",
-      "Salt og peber",
-      "1 tsk. karry",
-      "1 spsk. citronsaft",
-      "1 løg",
-      "1 gulerod",
-      "1 håndfuld pickles",
-      "3 gulerødder",
-      "1 rødbede",
-      "1 æble",
-      "1 håndfuld rosiner",
-      "1 håndfuld solsikkekerner",
-      "Lidt citronsaft",
-      "Servér evt. med rugbrød, citron og frisk dild"
+      "1,4 kg flæskesteg",
+      "5 dl vand",
+      "1 spsk. salt",
+      "500 g kartofler",
+      "3-4 spsk. smør",
+      "1 håndfuld hakket persille",
+      "Lidt salt og peber",
+      "½ rødkål",
+      "1 appelsin",
+      "1 håndfuld vindruer",
+      "¼ granatæble",
+      "1 lille håndfuld persille",
+      "1 håndfuld valnødder",
+      "3 spsk. olie",
+      "Lidt salt og peber",
+      "1 god spsk. sirup"
      ],
-     "score": 10.34,
-     "saving": 4.95,
-     "offer_count": 2
-    },
+     "score": 4.3,
+     "saving": 0.0,
+     "offer_count": 0
+    }
+   ]
+  },
+  {
+   "day": "Tirsdag",
+   "options": [
     {
      "id": "aftensmad/pizza/pitapizza",
      "name": "Pitapizza",
@@ -1305,8 +681,8 @@
      "source": "Bilka opskrifter",
      "kid": 3,
      "family": "pizza",
-     "cost": 177.94,
-     "offer_share": 0.0,
+     "cost": 158.85,
+     "offer_share": 0.29,
      "products": [
       {
        "id": "112675",
@@ -1330,10 +706,11 @@
        "id": "105432",
        "name": "Revet mozzarella 20% fedt øko",
        "size": "140 g",
-       "price": 18.95,
+       "price": 16.0,
        "qty": 1,
-       "offer": null,
-       "pantry": false
+       "offer": "Tilbud, før 18,95 kr (avisen: Økologisk revet mozarella)",
+       "pantry": false,
+       "before": 18.95
       },
       {
        "id": "81994",
@@ -1420,10 +797,11 @@
        "id": "104682",
        "name": "Saltet og tørret italiensk parmaskinke i skiver",
        "size": "70 g",
-       "price": 46.14,
+       "price": 30.0,
        "qty": 1,
-       "offer": null,
-       "pantry": false
+       "offer": "Skarp pris",
+       "pantry": false,
+       "before": 46.14
       },
       {
        "id": "135634",
@@ -1449,359 +827,28 @@
       "1 pakke pepperoni + lidt basilikum",
       "Lidt rucola + parmaskinke + cherrytomater + parmesan"
      ],
-     "score": 10.0,
-     "saving": 0.0,
-     "offer_count": 0
-    },
-    {
-     "id": "aftensmad/madpandekager/madvafler",
-     "name": "Madvafler",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/madpandekager/madvafler/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:8d021e25-2370-4fa0-b7fe-bd01e24d09e3",
-     "time": "30-40 min",
-     "minutes": 40,
-     "source": "Ugens madplan",
-     "kid": 2,
-     "family": "andet",
-     "cost": 185.68,
-     "offer_share": 0.17,
-     "products": [
-      {
-       "id": "85163",
-       "name": "Creme fraiche 18% fedt øko",
-       "size": "200 g",
-       "price": 13.16,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "19990",
-       "name": "Smøreost naturel 21% fedt",
-       "size": "200 g",
-       "price": 12.0,
-       "qty": 1,
-       "offer": "Skarp pris (avisen: Philadelphia)",
-       "pantry": false,
-       "before": 22.95
-      },
-      {
-       "id": "84121",
-       "name": "Minimælk 0,4% fedt",
-       "size": "1 l",
-       "price": 10.6,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "115245",
-       "name": "Kyllingebrystfilet",
-       "size": "280 g",
-       "price": 32.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "125811",
-       "name": "Saltet smør",
-       "size": "200 g",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "82383",
-       "name": "Grahamsmel",
-       "size": "1 kg",
-       "price": 12.32,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "117123",
-       "name": "Syltede rødløg",
-       "size": "115 g",
-       "price": 19.75,
-       "qty": 1,
-       "offer": "Tilbud, før 20,85 kr",
-       "pantry": false,
-       "before": 20.85
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38636",
-       "name": "Citron",
-       "size": "1 stk",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "37982",
-       "name": "Gulerødder øko",
-       "size": "1 kg",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "53365",
-       "name": "Skrabeæg M/L",
-       "size": "10 stk",
-       "price": 31.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      }
-     ],
-     "ingredients": [
-      "4 dl mælk",
-      "5 æg",
-      "1/2 tsk. salt",
-      "25 g smør + ekstra til stegning",
-      "200 g hvedemel",
-      "50 g grahamsmel",
-      "100 g flødeost naturel",
-      "½ fed hvidløg",
-      "1 spsk. hakket persille",
-      "Salt og peber",
-      "1 spsk. citronsaft",
-      "1 dl creme fraiche",
-      "½ lilla spidskål",
-      "1-2 gulerødder",
-      "250 g kylling",
-      "2 avocadoer",
-      "Salt og peber",
-      "3 spsk. syltede rødløg (færdigkøbt eller hjemmelavede*)",
-      "Ønsker du at lave de syltede rødløg selv, skal du starte med dette. Snit rødløg fint og kom i et glas. Varm eddike, vand og sukker i en gryde til sukkeret smelter. Hæld det over rødløgene og lad det trække i en times tid inden det bruges"
-     ],
-     "score": 7.34,
-     "saving": 12.05,
+     "score": 10.88,
+     "saving": 19.09,
      "offer_count": 2
     },
     {
-     "id": "aftensmad/pastaretter/gnocchi-med-salsiccia",
-     "name": "Gnocchi med salsiccia",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/gnocchi-med-salsiccia/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:a375713e-4bd8-436d-893a-051115153668",
-     "time": "20 min",
-     "minutes": 20,
+     "id": "aftensmad/pizza/kartoffelpizza",
+     "name": "Kartoffelpizza",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pizza/kartoffelpizza/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:bac1d9ee-05ec-4ca0-82d0-a72b5170835d",
+     "time": "25 min",
+     "minutes": 25,
      "source": "Bilka opskrifter",
-     "kid": 1,
-     "family": "pasta",
-     "cost": 112.15,
-     "offer_share": 0.16,
-     "products": [
-      {
-       "id": "142264",
-       "name": "Gnocchi",
-       "size": "500 g",
-       "price": 17.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "40189",
-       "name": "Broccoli øko",
-       "size": "1 stk",
-       "price": 18.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "89526",
-       "name": "Haricots verts øko",
-       "size": "450 g",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "128867",
-       "name": "Fine ærter øko",
-       "size": "400 g",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38740",
-       "name": "Citroner øko",
-       "size": "500 g",
-       "price": 18.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "19997",
-       "name": "Naturel flødeost 25% fedt",
-       "size": "200 g",
-       "price": 18.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": false,
-       "before": 24.95
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "63865",
-       "name": "Stødt sort peber",
-       "size": "100 g",
-       "price": 9.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "200 g salsiccia i tern",
-      "400 g gnocchi",
-      "200 g broccoli",
-      "2 fed hvidløg",
-      "150 g grønne bønner (fra frost)",
-      "150 g ærter (fra frost)",
-      "Citronskal fra 1 øko citron",
-      "150 g flødeost naturel",
-      "1,5 dl vand",
-      "Godt med salt og peber"
-     ],
-     "score": 4.32,
-     "saving": 6.95,
-     "offer_count": 1
-    }
-   ]
-  },
-  {
-   "day": "Torsdag",
-   "options": [
-    {
-     "id": "aftensmad/burger/kyllingeburger",
-     "name": "Kyllingeburger",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/burger/kyllingeburger/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:72631dd8-2a87-48e2-9c70-505ada9bc834",
-     "time": "35-40  min",
-     "minutes": 40,
-     "source": "Ugens madplan",
      "kid": 3,
-     "family": "burger",
-     "cost": 227.9,
-     "offer_share": 0.13,
+     "family": "pizza",
+     "cost": 52.9,
+     "offer_share": 0.0,
      "products": [
       {
-       "id": "103715",
-       "name": "Brioche burgerbolle",
-       "size": "200 g",
-       "price": 18.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "169794",
-       "name": "Kyllingebrystfilet",
-       "size": "650 g",
-       "price": 64.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "40383",
-       "name": "Mini romainesalat",
-       "size": "1 stk",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "55377",
-       "name": "Bacon i skiver",
-       "size": "300 g",
-       "price": 30.0,
-       "qty": 1,
-       "offer": "Tilbud, før 36,95 kr",
-       "pantry": false,
-       "before": 36.95
-      },
-      {
-       "id": "51061",
-       "name": "Peberfrugter røde",
-       "size": "1 stk",
-       "price": 9.0,
+       "id": "135617",
+       "name": "Mascarpone Italiano 42% fedt",
+       "size": "250 g",
+       "price": 19.95,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -1816,80 +863,8 @@
        "pantry": false
       },
       {
-       "id": "162820",
-       "name": "Lagereddike klar",
-       "size": "1 l",
-       "price": 6.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "81992",
-       "name": "Sukker",
-       "size": "1 kg",
-       "price": 7.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "82038",
-       "name": "Hel sort peber øko",
-       "size": "100 g",
-       "price": 28.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "125887",
-       "name": "Økologiske æg S",
-       "size": "4 stk",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "63864",
-       "name": "Sød paprika",
-       "size": "100 g",
-       "price": 6.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "18301",
-       "name": "Modne avocadoer",
-       "size": "3 stk",
-       "price": 29.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18364",
-       "name": "Agurk",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "51128",
-       "name": "Koriander øko",
+       "id": "38239",
+       "name": "Rosmarin øko",
        "size": "1 stk",
        "price": 17.0,
        "qty": 1,
@@ -1897,162 +872,19 @@
        "pantry": false
       },
       {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "8 burgerboller",
-      "8 salatblade",
-      "1 agurk",
-      "1 pakke bacon (8 stykker)",
-      "1 stor rød peberfrugt",
-      "1 stort rødløg",
-      "1,5 dl eddike",
-      "0,5-1 dl vand",
-      "1/2 dl sukker",
-      "Evt. 1 tsk. peberkorn",
-      "400-600 g kyllingebryst",
-      "2 æg",
-      "1 dl pankorasp",
-      "Salt og peber",
-      "1 spsk. paprika",
-      "½ dl hvedemel",
-      "1 dl olie til stegning",
-      "2-3 avocadoer",
-      "1 fed hvidløg",
-      "Salt og peber",
-      "1 lille håndfuld frisk koriander",
-      "2 spsk. limesaft"
-     ],
-     "score": 10.26,
-     "saving": 6.95,
-     "offer_count": 1
-    },
-    {
-     "id": "aftensmad/pastaretter/bolognese",
-     "name": "Bolognese",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/bolognese/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:98b4e59e-a1bf-4389-95a7-439d538c13c5",
-     "time": "40 min",
-     "minutes": 40,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "pasta",
-     "cost": 221.33,
-     "offer_share": 0.2,
-     "products": [
-      {
-       "id": "37982",
-       "name": "Gulerødder øko",
-       "size": "1 kg",
-       "price": 15.0,
+       "id": "41685",
+       "name": "Mozzarella 19% fedt",
+       "size": "125 g",
+       "price": 7.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "180520",
-       "name": "Hakket oksekød 8-12% fedt",
-       "size": "0.4 kg",
-       "price": 44.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "162740",
-       "name": "Fettuccine",
-       "size": "250 g",
-       "price": 16.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "85446",
-       "name": "Tomatpuré",
-       "size": "140 g",
-       "price": 6.1,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "87500",
-       "name": "Balsamicoeddike",
-       "size": "250 ml",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "90168",
-       "name": "Cayennepeber øko",
-       "size": "50 g",
-       "price": 20.84,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "63553",
-       "name": "Pinot Noir",
-       "size": "75 cl",
-       "price": 45.0,
-       "qty": 1,
-       "offer": "Skarp pris (avisen: Francois Martenot)",
-       "pantry": false,
-       "before": 79.0
-      },
-      {
-       "id": "116982",
-       "name": "Oksebouillon",
-       "size": "100 g",
-       "price": 5.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
+       "id": "141864",
+       "name": "Flagesalt fra havet",
+       "size": "175 g",
+       "price": 24.22,
        "qty": 1,
        "offer": null,
        "pantry": true
@@ -2065,789 +897,22 @@
        "qty": 1,
        "offer": null,
        "pantry": true
-      },
-      {
-       "id": "170956",
-       "name": "Parmigiano Reggiano",
-       "size": "125 g",
-       "price": 35.94,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18309",
-       "name": "Løg øko",
-       "size": "750 g",
-       "price": 14.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129174",
-       "name": "Basilikum",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
       }
      ],
      "ingredients": [
-      "3 fed hvidløg",
-      "3 gulerødder",
-      "1 løg",
-      "Olie til stegning",
-      "400 g hakket oksekød",
-      "4 store spsk. tomatpuré",
-      "2 spsk. balsamico",
-      "1 nip cayennepeber",
-      "2,5 dl rødvin",
-      "1 bouillonterning lagt i blød i 2,5 dl kogende vand",
-      "Godt med salt og peber",
-      "300-400 g. spaghetti, alt efter hvor meget I kan spise",
-      "Drys med parmesan, ekstra salt og peber og frisk basilikum"
-     ],
-     "score": 9.9,
-     "saving": 34.0,
-     "offer_count": 1
-    },
-    {
-     "id": "aftensmad/sandwiches-pita-og-wraps/pita/wraps-med-kylling",
-     "name": "Wraps med kylling",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/sandwiches-pita-og-wraps/pita/wraps-med-kylling/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:88175400-79ed-4d18-be5f-2f1c0daebc99",
-     "time": "25 min",
-     "minutes": 25,
-     "source": "Bilka opskrifter",
-     "kid": 2,
-     "family": "kylling",
-     "cost": 173.61,
-     "offer_share": 0.14,
-     "products": [
-      {
-       "id": "115245",
-       "name": "Kyllingebrystfilet",
-       "size": "280 g",
-       "price": 32.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "17226",
-       "name": "Tortillas store",
-       "size": "6 x 61.83 g",
-       "price": 15.0,
-       "qty": 1,
-       "offer": "Skarp pris (avisen: Santa Maria Tex Mex)",
-       "pantry": false,
-       "before": 24.95
-      },
-      {
-       "id": "18518",
-       "name": "Icebergsalat",
-       "size": "1 stk",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18364",
-       "name": "Agurk",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18380",
-       "name": "Tomater",
-       "size": "1 stk",
-       "price": 3.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18301",
-       "name": "Modne avocadoer",
-       "size": "3 stk",
-       "price": 29.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "138030",
-       "name": "Rødløg",
-       "size": "500 g",
-       "price": 8.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "111016",
-       "name": "Mayonnaise",
-       "size": "400 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "106552",
-       "name": "Tomatketchup",
-       "size": "560 g",
-       "price": 15.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "85163",
-       "name": "Creme fraiche 18% fedt øko",
-       "size": "200 g",
-       "price": 13.16,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "111003",
-       "name": "Sød fransk sennep",
-       "size": "400 g",
-       "price": 10.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "63864",
-       "name": "Sød paprika",
-       "size": "100 g",
-       "price": 6.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93851",
-       "name": "Hvidløgspulver",
-       "size": "75 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": true,
-       "before": 13.5
-      },
-      {
-       "id": "174750",
-       "name": "Chilipulver",
-       "size": "60 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 11,00 kr",
-       "pantry": false,
-       "before": 11.0
-      },
-      {
-       "id": "93625",
-       "name": "Syltede cornichoner",
-       "size": "190 g",
-       "price": 11.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      }
-     ],
-     "ingredients": [
-      "280 g kyllingebryst",
-      "2 spsk. olie til stegning",
-      "Lidt salt, peber og grillkrydderi",
-      "4-6 store wraps",
-      "1/2 iceberg salathoved eller hjertesalat",
-      "1 agurk",
-      "3 tomater",
-      "1 avocado",
+      "3-4 færdige pizzabunde",
+      "150 g mascarpone",
+      "4 kartofler",
       "1 rødløg",
-      "1 god spsk. mayonnaise",
-      "1 lille spsk. ketchup",
-      "1 god spsk. creme fraiche",
-      "1 tsk. sød sennep",
-      "godt med salt og peber",
-      "1/2 tsk. paprika",
-      "1/2 tsk. hvidløgspulver",
-      "1 nip chilipulver",
-      "1 stor cornichon, finthakket"
+      "1 lille håndfuld frisk rosmarin",
+      "3 kugler mozzarella",
+      "3 spsk. olivenolie",
+      "godt med flagesalt og peber",
+      "Du kan evt. tilberede en nem salat ved at blande fintsnittet spidskål, tynde strimler af gulerod, skiver af æble og en håndfuld friske urter. Top salaten med lidt citronsaft, en smule salt og et drys rosiner for ekstra smag."
      ],
-     "score": 7.28,
-     "saving": 10.95,
-     "offer_count": 2
-    },
-    {
-     "id": "aftensmad/danske-retter/flaeskesteg",
-     "name": "Flæskesteg",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/flaeskesteg/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:7c024b28-75f1-4cef-b45e-1e215ccaa533",
-     "time": "90 min",
-     "minutes": 90,
-     "source": "Bilka opskrifter",
-     "kid": 2,
-     "family": "dansk",
-     "cost": 131.44,
-     "offer_share": 0.04,
-     "products": [
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "33757",
-       "name": "Smør øko",
-       "size": "200 g",
-       "price": 22.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "18619",
-       "name": "Rødkål øko",
-       "size": "1 stk",
-       "price": 18.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38149",
-       "name": "Appelsiner",
-       "size": "1 stk",
-       "price": 5.5,
-       "qty": 1,
-       "offer": "Mix 5 for 25,00",
-       "pantry": false,
-       "multi": {
-        "n": 5,
-        "total": 25.0
-       }
-      },
-      {
-       "id": "41701",
-       "name": "Stenfrie grønne druer",
-       "size": "500 g",
-       "price": 26.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "42528",
-       "name": "Granatæbler",
-       "size": "1 stk",
-       "price": 16.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "154977",
-       "name": "Valnøddekerner",
-       "size": "80 g",
-       "price": 12.04,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "17373",
-       "name": "Lys sirup",
-       "size": "750 g",
-       "price": 20.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      }
-     ],
-     "ingredients": [
-      "1,4 kg flæskesteg",
-      "5 dl vand",
-      "1 spsk. salt",
-      "500 g kartofler",
-      "3-4 spsk. smør",
-      "1 håndfuld hakket persille",
-      "Lidt salt og peber",
-      "½ rødkål",
-      "1 appelsin",
-      "1 håndfuld vindruer",
-      "¼ granatæble",
-      "1 lille håndfuld persille",
-      "1 håndfuld valnødder",
-      "3 spsk. olie",
-      "Lidt salt og peber",
-      "1 god spsk. sirup"
-     ],
-     "score": 4.08,
-     "saving": 0.0,
-     "offer_count": 1
-    }
-   ]
-  },
-  {
-   "day": "Fredag",
-   "options": [
-    {
-     "id": "aftensmad/danske-retter/karbonader",
-     "name": "Karbonader",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/karbonader/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:26b30edc-769c-401f-aae1-cde78d53047a",
-     "time": "35 min",
-     "minutes": 35,
-     "source": "Ugens madplan",
-     "kid": 3,
-     "family": "dansk",
-     "cost": 151.34,
-     "offer_share": 0.0,
-     "products": [
-      {
-       "id": "81498",
-       "name": "Hakket grisekød 8-12% fedt",
-       "size": "0.5 kg",
-       "price": 27.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "125887",
-       "name": "Økologiske æg S",
-       "size": "4 stk",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "137133",
-       "name": "Rasp øko",
-       "size": "500 g",
-       "price": 16.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "65123",
-       "name": "Saltet smør",
-       "size": "200 g",
-       "price": 21.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "89621",
-       "name": "Sødmælk 3,5% fedt",
-       "size": "500 ml",
-       "price": 8.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "82399",
-       "name": "Fine ærter",
-       "size": "700 g",
-       "price": 13.94,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "39729",
-       "name": "Grønne asparges i bundt",
-       "size": "250 g",
-       "price": 30.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18309",
-       "name": "Løg øko",
-       "size": "750 g",
-       "price": 14.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "84121",
-       "name": "Minimælk 0,4% fedt",
-       "size": "1 l",
-       "price": 10.6,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "500 g hakket svin",
-      "1 æg",
-      "1 løg",
-      "Godt med salt og peber",
-      "2/3 dl mel",
-      "1 dl mælk",
-      "2 æg",
-      "2 dl rasp",
-      "Salt, peber",
-      "1/2 dl olie eller smør til stegning",
-      "300 g kartofler",
-      "1 spsk. smør",
-      "1 spsk. mel",
-      "3 dl sødmælk",
-      "1 dl ærter (fra frost)",
-      "4 stk. grønne asparges",
-      "1 spsk. hakket persille",
-      "Godt med salt og peber"
-     ],
-     "score": 10.0,
+     "score": 10.3,
      "saving": 0.0,
      "offer_count": 0
-    },
-    {
-     "id": "aftensmad/madpandekager/madpandekager",
-     "name": "Madpandekager",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/madpandekager/madpandekager/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:3d02e7b9-dc02-47b3-acca-c3174fbf8dee",
-     "time": "30-40 min",
-     "minutes": 40,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "andet",
-     "cost": 213.88,
-     "offer_share": 0.08,
-     "products": [
-      {
-       "id": "139804",
-       "name": "Kyllingefilet tilsat 9% lage",
-       "size": "450 g",
-       "price": 34.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "85163",
-       "name": "Creme fraiche 18% fedt øko",
-       "size": "200 g",
-       "price": 13.16,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "125887",
-       "name": "Økologiske æg S",
-       "size": "4 stk",
-       "price": 13.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "19997",
-       "name": "Naturel flødeost 25% fedt",
-       "size": "200 g",
-       "price": 18.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": false,
-       "before": 24.95
-      },
-      {
-       "id": "125811",
-       "name": "Saltet smør",
-       "size": "200 g",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "82383",
-       "name": "Grahamsmel",
-       "size": "1 kg",
-       "price": 12.32,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38178",
-       "name": "Persille",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38636",
-       "name": "Citron",
-       "size": "1 stk",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "84121",
-       "name": "Minimælk 0,4% fedt",
-       "size": "1 l",
-       "price": 10.6,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "91730",
-       "name": "Sriracha chilimayonnaise",
-       "size": "215 ml",
-       "price": 22.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "40383",
-       "name": "Mini romainesalat",
-       "size": "1 stk",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "129946",
-       "name": "Hvidløg øko",
-       "size": "100 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "61090",
-       "name": "Agurk øko",
-       "size": "1 stk",
-       "price": 12.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "138030",
-       "name": "Rødløg",
-       "size": "500 g",
-       "price": 8.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "37982",
-       "name": "Gulerødder øko",
-       "size": "1 kg",
-       "price": 15.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "117029",
-       "name": "Grøntsagsbouillon",
-       "size": "100 g",
-       "price": 5.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "4 dl mælk",
-      "4 æg",
-      "1/2 tsk. salt",
-      "25 g smør + ekstra til stegning",
-      "150 g hvedemel",
-      "50 g grahamsmel",
-      "100 g flødeost naturel",
-      "½ fed hvidløg",
-      "1 spsk. hakket persille",
-      "Salt og peber",
-      "1 spsk. citronsaft",
-      "1 dl creme fraiche",
-      "250 g kyllingebryst + bouillonterning",
-      "1 pakke hjertesalat",
-      "1 agurk",
-      "1 bakke cherrytomater",
-      "1 rødløg",
-      "1-2 gulerødder",
-      "Salt og peber",
-      "Evt. lidt chilimayo"
-     ],
-     "score": 9.66,
-     "saving": 6.95,
-     "offer_count": 1
     },
     {
      "id": "aftensmad/sandwiches-pita-og-wraps/pita/pita-med-kylling",
@@ -2859,8 +924,8 @@
      "source": "Bilka opskrifter",
      "kid": 2,
      "family": "kylling",
-     "cost": 266.26,
-     "offer_share": 0.11,
+     "cost": 263.26,
+     "offer_share": 0.15,
      "products": [
       {
        "id": "115245",
@@ -2902,10 +967,11 @@
        "id": "18518",
        "name": "Icebergsalat",
        "size": "1 stk",
-       "price": 13.0,
+       "price": 10.0,
        "qty": 1,
-       "offer": null,
-       "pantry": false
+       "offer": "Skarp pris (avisen: Iceberg salat)",
+       "pantry": false,
+       "before": 13.0
       },
       {
        "id": "18364",
@@ -3004,7 +1070,7 @@
        "size": "55 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Skarp pris",
+       "offer": "Skarp pris (avisen: Krydderier)",
        "pantry": true,
        "before": 15.25
       },
@@ -3014,7 +1080,7 @@
        "size": "75 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Skarp pris",
+       "offer": "Skarp pris (avisen: Krydderier)",
        "pantry": true,
        "before": 13.5
       },
@@ -3024,7 +1090,7 @@
        "size": "60 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 11,00 kr",
+       "offer": "Tilbud, før 11,00 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 11.0
       },
@@ -3052,7 +1118,7 @@
        "size": "65 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
        "pantry": true,
        "before": 12.25
       },
@@ -3088,28 +1154,68 @@
       "1 nip chilipulver",
       "1 stor cornichon, finthakket"
      ],
-     "score": 7.22,
-     "saving": 2.1,
-     "offer_count": 2
+     "score": 7.6,
+     "saving": 5.1,
+     "offer_count": 3
     },
     {
-     "id": "aftensmad/asiatiske-retter/chicken-catzu",
-     "name": "Chicken katsu",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/asiatiske-retter/chicken-catzu/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:76179751-0e4c-40d6-b08f-69184fda856d",
-     "time": "30 min",
-     "minutes": 30,
+     "id": "aftensmad/danske-retter/biksemad",
+     "name": "Biksemad",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/biksemad/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:97e1e010-f876-4fc7-b78f-9cea8ad6ca4e",
+     "time": "40 min",
+     "minutes": 40,
      "source": "Ugens madplan",
      "kid": 0,
-     "family": "kylling",
-     "cost": 158.17,
-     "offer_share": 0.0,
+     "family": "dansk",
+     "cost": 205.85,
+     "offer_share": 0.43,
      "products": [
       {
-       "id": "139804",
-       "name": "Kyllingefilet tilsat 9% lage",
-       "size": "450 g",
-       "price": 34.95,
+       "id": "68599",
+       "name": "Gullasch",
+       "size": "400 g",
+       "price": 89.0,
+       "qty": 1,
+       "offer": "Mix 2 for 149,00",
+       "pantry": false,
+       "multi": {
+        "n": 2,
+        "total": 149.0
+       }
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "106552",
+       "name": "Tomatketchup",
+       "size": "560 g",
+       "price": 15.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93625",
+       "name": "Syltede cornichoner",
+       "size": "190 g",
+       "price": 11.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "151786",
+       "name": "Syltede rødbeder",
+       "size": "0.48 kg",
+       "price": 14.5,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -3124,36 +1230,17 @@
        "pantry": false
       },
       {
-       "id": "17317",
-       "name": "Kokosmælk",
-       "size": "400 ml",
-       "price": 9.5,
+       "id": "125811",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 9.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "93864",
-       "name": "Paprika",
-       "size": "55 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": true,
-       "before": 15.25
-      },
-      {
-       "id": "164407",
-       "name": "Mango i tern",
-       "size": "300 g",
-       "price": 16.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18323",
-       "name": "Gulerødder",
+       "id": "18305",
+       "name": "Løg",
        "size": "1 kg",
        "price": 12.0,
        "qty": 1,
@@ -3161,74 +1248,10 @@
        "pantry": false
       },
       {
-       "id": "37985",
-       "name": "Blomkål øko",
-       "size": "1 stk",
-       "price": 20.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18359",
-       "name": "Forårsløg i bundt",
-       "size": "1 stk",
-       "price": 9.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "63753",
-       "name": "Squash øko",
-       "size": "1 stk",
-       "price": 9.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "63861",
-       "name": "Karry",
-       "size": "90 g",
-       "price": 6.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "117029",
-       "name": "Grøntsagsbouillon",
-       "size": "100 g",
-       "price": 5.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "43382",
-       "name": "Jasminris",
-       "size": "1 kg",
-       "price": 16.52,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "51128",
-       "name": "Koriander øko",
-       "size": "1 stk",
-       "price": 17.0,
+       "id": "63874",
+       "name": "Grillkrydderi",
+       "size": "97 g",
+       "price": 29.95,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -3243,157 +1266,220 @@
        "pantry": true
       },
       {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
        "qty": 1,
-       "offer": null,
-       "pantry": true
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
       }
      ],
      "ingredients": [
-      "400 g kyllingebryst",
-      "2 æg",
-      "2 dl rasp, gerne pankorasp",
-      "1 tsk. salt + lidt peber",
-      "1 tsk. paprika",
-      "Godt med olie til stegning",
-      "1 stor gulerod",
-      "200 g blomkål",
-      "1-2 forårsløg",
-      "1 squash",
-      "Olie til stegning",
-      "Salt og peber",
-      "2 tsk. karry",
-      "2 dl bouillonvand (1 terning - grøntsags)",
-      "1 dåse kokosmælk",
-      "½ pose frossen mango, kan undlades",
-      "2-3 dl ris",
-      "Evt. lidt friske urter til servering"
+      "800 g kartofler",
+      "400 g skært oksekød eller rester af en culottesteg eller lignende",
+      "3 løg",
+      "2 spsk. smør",
+      "Godt med salt og peber",
+      "4 æg",
+      "Salt, peber og grill krydderi",
+      "100 g syltede rødbeder",
+      "100 g cornichoner",
+      "6 spsk. ketchup",
+      "Lidt persille som pynt"
      ],
-     "score": 1.5,
+     "score": 2.16,
      "saving": 0.0,
-     "offer_count": 0
+     "offer_count": 1
     }
    ]
   },
   {
-   "day": "Lørdag",
+   "day": "Onsdag",
    "options": [
     {
-     "id": "aftensmad/pizza/kartoffelpizza",
-     "name": "Kartoffelpizza",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pizza/kartoffelpizza/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:bac1d9ee-05ec-4ca0-82d0-a72b5170835d",
-     "time": "25 min",
-     "minutes": 25,
+     "id": "aftensmad/danske-retter/tarteletter",
+     "name": "Tarteletter",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/tarteletter/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:65d72192-bc6a-436e-8c17-8baa6dbedec5",
+     "time": "20-30 min",
+     "minutes": 30,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "pizza",
-     "cost": 52.9,
-     "offer_share": 0.0,
+     "family": "dansk",
+     "cost": 138.55,
+     "offer_share": 0.27,
      "products": [
       {
-       "id": "135617",
-       "name": "Mascarpone Italiano 42% fedt",
-       "size": "250 g",
-       "price": 19.95,
+       "id": "54720",
+       "name": "Hele hvide asparges øko",
+       "size": "130 g",
+       "price": 20.0,
+       "qty": 1,
+       "offer": "Skarp pris",
+       "pantry": false,
+       "before": 28.95
+      },
+      {
+       "id": "92952",
+       "name": "Luksus tarteletter",
+       "size": "225 g",
+       "price": 18.0,
+       "qty": 1,
+       "offer": "Skarp pris",
+       "pantry": false,
+       "before": 23.25
+      },
+      {
+       "id": "169794",
+       "name": "Kyllingebrystfilet",
+       "size": "650 g",
+       "price": 64.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "138030",
-       "name": "Rødløg",
-       "size": "500 g",
-       "price": 8.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38239",
-       "name": "Rosmarin øko",
-       "size": "1 stk",
-       "price": 17.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "41685",
-       "name": "Mozzarella 19% fedt",
-       "size": "125 g",
-       "price": 7.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "141864",
-       "name": "Flagesalt fra havet",
-       "size": "175 g",
-       "price": 24.22,
+       "id": "117003",
+       "name": "Hønsebouillon",
+       "size": "100 g",
+       "price": 5.5,
        "qty": 1,
        "offer": null,
        "pantry": true
       },
       {
-       "id": "63865",
+       "id": "84121",
+       "name": "Minimælk 0,4% fedt",
+       "size": "1 l",
+       "price": 10.6,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93861",
        "name": "Stødt sort peber",
-       "size": "100 g",
-       "price": 9.25,
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "18380",
+       "name": "Tomater",
+       "size": "1 stk",
+       "price": 3.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "61090",
+       "name": "Agurk øko",
+       "size": "1 stk",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
        "qty": 1,
        "offer": null,
        "pantry": true
       }
      ],
      "ingredients": [
-      "3-4 færdige pizzabunde",
-      "150 g mascarpone",
-      "4 kartofler",
-      "1 rødløg",
-      "1 lille håndfuld frisk rosmarin",
-      "3 kugler mozzarella",
-      "3 spsk. olivenolie",
-      "godt med flagesalt og peber",
-      "Du kan evt. tilberede en nem salat ved at blande fintsnittet spidskål, tynde strimler af gulerod, skiver af æble og en håndfuld friske urter. Top salaten med lidt citronsaft, en smule salt og et drys rosiner for ekstra smag."
+      "10 tarteletskaller",
+      "500 g kyllingebryst eller hønsekød fra frost",
+      "Vand til kogning",
+      "1 bouillonterning",
+      "2 spsk. smør",
+      "3 spsk. hvedemel",
+      "4 dl mælk",
+      "3 dl kogevand fra kyllingen",
+      "200 g hvide asparges (på glas eller dåse)",
+      "godt med salt og peber",
+      "Top evt. med agurk, tomat og persille"
      ],
-     "score": 10.0,
-     "saving": 0.0,
-     "offer_count": 0
+     "score": 10.84,
+     "saving": 14.2,
+     "offer_count": 2
     },
     {
-     "id": "aftensmad/danske-retter/braendende-kaerlighed",
-     "name": "Brændende kærlighed",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/braendende-kaerlighed/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:ae1ee330-afee-4df7-991e-bbc946c743e1",
-     "time": "40 min",
+     "id": "aftensmad/madpandekager/madpandekager",
+     "name": "Madpandekager",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/madpandekager/madpandekager/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:3d02e7b9-dc02-47b3-acca-c3174fbf8dee",
+     "time": "30-40 min",
      "minutes": 40,
      "source": "Bilka opskrifter",
      "kid": 3,
-     "family": "dansk",
-     "cost": 100.8,
-     "offer_share": 0.0,
+     "family": "andet",
+     "cost": 235.88,
+     "offer_share": 0.06,
      "products": [
       {
-       "id": "39150",
-       "name": "Kartofler øko",
-       "size": "1 kg",
-       "price": 15.0,
+       "id": "139804",
+       "name": "Kyllingefilet tilsat 9% lage",
+       "size": "450 g",
+       "price": 34.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "18036",
-       "name": "Syltede rødbeder øko",
-       "size": "400 g",
-       "price": 19.95,
+       "id": "85163",
+       "name": "Creme fraiche 18% fedt øko",
+       "size": "200 g",
+       "price": 13.16,
        "qty": 1,
        "offer": null,
        "pantry": false
+      },
+      {
+       "id": "125887",
+       "name": "Økologiske æg S",
+       "size": "4 stk",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "19997",
+       "name": "Naturel flødeost 25% fedt",
+       "size": "200 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Buko fløde- eller smelteost)",
+       "pantry": false,
+       "before": 24.95
       },
       {
        "id": "125811",
@@ -3405,37 +1491,10 @@
        "pantry": false
       },
       {
-       "id": "89621",
-       "name": "Sødmælk 3,5% fedt",
-       "size": "500 ml",
-       "price": 8.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "63865",
-       "name": "Stødt sort peber",
-       "size": "100 g",
-       "price": 9.25,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "121068",
-       "name": "Bacon i tern",
-       "size": "200 g",
-       "price": 12.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "18309",
-       "name": "Løg øko",
-       "size": "750 g",
-       "price": 14.0,
+       "id": "82383",
+       "name": "Grahamsmel",
+       "size": "1 kg",
+       "price": 12.32,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -3450,13 +1509,113 @@
        "pantry": false
       },
       {
-       "id": "37998",
-       "name": "Purløg",
+       "id": "38636",
+       "name": "Citron",
        "size": "1 stk",
-       "price": 10.0,
+       "price": 5.0,
        "qty": 1,
        "offer": null,
        "pantry": false
+      },
+      {
+       "id": "84121",
+       "name": "Minimælk 0,4% fedt",
+       "size": "1 l",
+       "price": 10.6,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "91730",
+       "name": "Sriracha chilimayonnaise",
+       "size": "215 ml",
+       "price": 32.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "40383",
+       "name": "Mini romainesalat",
+       "size": "1 stk",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "61090",
+       "name": "Agurk øko",
+       "size": "1 stk",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "73358",
+       "name": "Cherry tomater øko",
+       "size": "250 g",
+       "price": 17.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "138030",
+       "name": "Rødløg",
+       "size": "500 g",
+       "price": 8.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37982",
+       "name": "Gulerødder øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "117029",
+       "name": "Grøntsagsbouillon",
+       "size": "100 g",
+       "price": 5.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
       },
       {
        "id": "16868",
@@ -3469,19 +1628,30 @@
       }
      ],
      "ingredients": [
-      "1 kg. kartofler",
-      "50 g. smør",
-      "1 dl. fløde eller mælk",
+      "4 dl mælk",
+      "4 æg",
+      "1/2 tsk. salt",
+      "25 g smør + ekstra til stegning",
+      "150 g hvedemel",
+      "50 g grahamsmel",
+      "100 g flødeost naturel",
+      "½ fed hvidløg",
+      "1 spsk. hakket persille",
       "Salt og peber",
-      "300 g. bacon",
-      "2 løg eller rødløg",
+      "1 spsk. citronsaft",
+      "1 dl creme fraiche",
+      "250 g kyllingebryst + bouillonterning",
+      "1 pakke hjertesalat",
+      "1 agurk",
+      "1 bakke cherrytomater",
+      "1 rødløg",
+      "1-2 gulerødder",
       "Salt og peber",
-      "Syltede rødbeder",
-      "Persille og purløg"
+      "Evt. lidt chilimayo"
      ],
-     "score": 9.5,
-     "saving": 0.0,
-     "offer_count": 0
+     "score": 9.92,
+     "saving": 11.95,
+     "offer_count": 1
     },
     {
      "id": "aftensmad/gryderetter/boller-i-karry",
@@ -3645,144 +1815,82 @@
       "1 æble",
       "Smag til med salt og peber"
      ],
-     "score": 7.04,
+     "score": 7.34,
      "saving": 0.0,
      "offer_count": 1
     },
     {
-     "id": "aftensmad/danske-retter/risengroed",
-     "name": "Risengrød",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/risengroed/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:091ebdf1-f3cb-466d-9f41-109ce74ef144",
+     "id": "aftensmad/tilbehoer/roesti-med-parmaskinke",
+     "name": "Røsti med parmaskinke",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/tilbehoer/roesti-med-parmaskinke/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:86af0ee8-cdfe-4f18-8311-2fdf272879d7",
      "time": "40 min",
      "minutes": 40,
-     "source": "Bilka opskrifter",
+     "source": "Ugens madplan",
      "kid": 0,
-     "family": "dansk",
-     "cost": 36.55,
-     "offer_share": 0.44,
+     "family": "andet",
+     "cost": 198.76,
+     "offer_share": 0.23,
      "products": [
       {
-       "id": "174602",
-       "name": "Grødris",
-       "size": "1000 g",
-       "price": 16.0,
-       "qty": 1,
-       "offer": "Tilbud, før 18,25 kr (avisen: Grødris)",
-       "pantry": false,
-       "before": 18.25
-      },
-      {
-       "id": "84121",
-       "name": "Minimælk 0,4% fedt",
-       "size": "1 l",
-       "price": 10.6,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "64460",
-       "name": "Stødt kanel",
-       "size": "70 g",
-       "price": 8.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "81992",
-       "name": "Sukker",
+       "id": "39150",
+       "name": "Kartofler øko",
        "size": "1 kg",
-       "price": 7.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "119961",
-       "name": "Smørbar",
-       "size": "200 g",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      }
-     ],
-     "ingredients": [
-      "3 dl vand",
-      "2,5 dl grødris",
-      "1 liter mælk",
-      "1 lille tsk. salt",
-      "Kanelsukker + smør til servering"
-     ],
-     "score": 1.38,
-     "saving": 2.25,
-     "offer_count": 1
-    }
-   ]
-  },
-  {
-   "day": "Søndag",
-   "options": [
-    {
-     "id": "aftensmad/burger/fiskeburger",
-     "name": "Fiskeburger",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/burger/fiskeburger/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:1d4159da-a674-4208-bd40-52e4e6b8db88",
-     "time": "35 min",
-     "minutes": 35,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "burger",
-     "cost": 185.61,
-     "offer_share": 0.21,
-     "products": [
-      {
-       "id": "103715",
-       "name": "Brioche burgerbolle",
-       "size": "200 g",
-       "price": 18.0,
+       "price": 15.0,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "138509",
-       "name": "Grønlandske rejer i lage",
-       "size": "170 g",
-       "price": 39.0,
-       "qty": 1,
-       "offer": "Skarp pris (avisen: Grønlandske rejer, røget eller gravad laks)",
-       "pantry": false,
-       "before": 49.95
-      },
-      {
-       "id": "18518",
-       "name": "Icebergsalat",
+       "id": "63753",
+       "name": "Squash øko",
        "size": "1 stk",
+       "price": 9.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "19997",
+       "name": "Naturel flødeost 25% fedt",
+       "size": "200 g",
        "price": 13.0,
        "qty": 1,
+       "offer": "Skarp pris (avisen: Buko fløde- eller smelteost)",
+       "pantry": false,
+       "before": 24.95
+      },
+      {
+       "id": "104682",
+       "name": "Saltet og tørret italiensk parmaskinke i skiver",
+       "size": "70 g",
+       "price": 30.0,
+       "qty": 1,
+       "offer": "Skarp pris",
+       "pantry": false,
+       "before": 46.14
+      },
+      {
+       "id": "42528",
+       "name": "Granatæbler",
+       "size": "1 stk",
+       "price": 16.0,
+       "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "61090",
-       "name": "Agurk øko",
+       "id": "18379",
+       "name": "Æbler",
        "size": "1 stk",
-       "price": 12.0,
+       "price": 2.75,
        "qty": 1,
-       "offer": null,
-       "pantry": false
+       "offer": "Mix 10 for 25,00",
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
       },
       {
        "id": "38018",
@@ -3794,42 +1902,6 @@
        "pantry": false
       },
       {
-       "id": "38236",
-       "name": "Rødløg øko",
-       "size": "500 g",
-       "price": 12.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "162820",
-       "name": "Lagereddike klar",
-       "size": "1 l",
-       "price": 6.75,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "81992",
-       "name": "Sukker",
-       "size": "1 kg",
-       "price": 7.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "63860",
-       "name": "Hele sort peber",
-       "size": "100 g",
-       "price": 10.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
        "id": "85163",
        "name": "Creme fraiche 18% fedt øko",
        "size": "200 g",
@@ -3839,65 +1911,10 @@
        "pantry": false
       },
       {
-       "id": "111016",
-       "name": "Mayonnaise",
-       "size": "400 g",
-       "price": 13.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "38636",
-       "name": "Citron",
+       "id": "62598",
+       "name": "Porrer øko",
        "size": "1 stk",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "15200",
-       "name": "Dijonsennep",
-       "size": "370 g",
-       "price": 15.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "16868",
-       "name": "Fint salt m. jod",
-       "size": "1 kg",
-       "price": 5.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "93861",
-       "name": "Stødt sort peber",
-       "size": "65 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
-       "pantry": true,
-       "before": 12.25
-      },
-      {
-       "id": "37998",
-       "name": "Purløg",
-       "size": "1 stk",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "93625",
-       "name": "Syltede cornichoner",
-       "size": "190 g",
-       "price": 11.0,
+       "price": 8.0,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -3912,99 +1929,35 @@
        "pantry": false
       },
       {
-       "id": "93864",
-       "name": "Paprika",
-       "size": "55 g",
-       "price": 10.0,
-       "qty": 1,
-       "offer": "Skarp pris",
-       "pantry": true,
-       "before": 15.25
-      },
-      {
-       "id": "17010",
-       "name": "Hvedemel",
-       "size": "2 kg",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "79955",
-       "name": "Rapsolie",
-       "size": "1 l",
-       "price": 18.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      }
-     ],
-     "ingredients": [
-      "8 burgerboller",
-      "8 salatblade",
-      "1 agurk",
-      "200 rejer (i lage)",
-      "Lidt frisk dild",
-      "1 stort rødløg",
-      "1,5 dl eddike",
-      "0,5-1 dl vand",
-      "1/2 dl sukker",
-      "Evt. 1 tsk. peberkorn",
-      "1 dl creme fraiche",
-      "3 spsk. mayonnaise",
-      "1 spsk. citronsaft",
-      "1 tsk. sennep",
-      "1/2 tsk. salt + lidt peber",
-      "1 god håndfuld frisk dild, hakket",
-      "1 spsk. hakket purløg",
-      "1 spsk. hakket cornichoner",
-      "600-800 g torskeloins eller rødspættefileter",
-      "2 æg",
-      "1 dl pankorasp",
-      "Salt og peber",
-      "1 spsk. paprika",
-      "½ dl hvedemel",
-      "1 dl olie til stegning"
-     ],
-     "score": 9.92,
-     "saving": 10.95,
-     "offer_count": 1
-    },
-    {
-     "id": "aftensmad/danske-retter/hakkeboef-med-bloede-loeg-og-kartofler",
-     "name": "Hakkebøf med bløde løg og kartofler",
-     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/hakkeboef-med-bloede-loeg-og-kartofler/",
-     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:03f73468-1b27-435a-bc8f-ef65c4d319b2",
-     "time": "40 min",
-     "minutes": 40,
-     "source": "Bilka opskrifter",
-     "kid": 3,
-     "family": "dansk",
-     "cost": 116.4,
-     "offer_share": 0.0,
-     "products": [
-      {
-       "id": "180520",
-       "name": "Hakket oksekød 8-12% fedt",
-       "size": "0.4 kg",
-       "price": 44.95,
+       "id": "138030",
+       "name": "Rødløg",
+       "size": "500 g",
+       "price": 8.0,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "151786",
-       "name": "Syltede rødbeder",
-       "size": "0.48 kg",
-       "price": 14.5,
+       "id": "17373",
+       "name": "Lys sirup",
+       "size": "750 g",
+       "price": 20.95,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "18364",
-       "name": "Agurk",
+       "id": "18528",
+       "name": "Citronsaft",
+       "size": "200 ml",
+       "price": 6.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
        "size": "1 stk",
        "price": 10.0,
        "qty": 1,
@@ -4012,28 +1965,19 @@
        "pantry": false
       },
       {
-       "id": "18305",
-       "name": "Løg",
-       "size": "1 kg",
-       "price": 12.0,
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
        "qty": 1,
        "offer": null,
        "pantry": false
       },
       {
-       "id": "125811",
-       "name": "Saltet smør",
-       "size": "200 g",
-       "price": 9.95,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "87500",
-       "name": "Balsamicoeddike",
-       "size": "250 ml",
-       "price": 9.95,
+       "id": "49870",
+       "name": "Havsalt i flager",
+       "size": "250 g",
+       "price": 32.95,
        "qty": 1,
        "offer": null,
        "pantry": true
@@ -4048,28 +1992,10 @@
        "pantry": true
       },
       {
-       "id": "81992",
-       "name": "Sukker",
-       "size": "1 kg",
-       "price": 7.5,
-       "qty": 1,
-       "offer": null,
-       "pantry": true
-      },
-      {
-       "id": "110567",
-       "name": "Kulør",
-       "size": "200 ml",
-       "price": 10.0,
-       "qty": 1,
-       "offer": null,
-       "pantry": false
-      },
-      {
-       "id": "132804",
-       "name": "Piskefløde 36% fedt",
-       "size": "250 ml",
-       "price": 15.0,
+       "id": "125811",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 9.95,
        "qty": 1,
        "offer": null,
        "pantry": false
@@ -4098,33 +2024,299 @@
        "size": "65 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 12,25 kr",
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
        "pantry": true,
        "before": 12.25
       }
      ],
      "ingredients": [
-      "300 g kartofler",
-      "1 dl eddike",
-      "4 spsk. sukker",
-      "½ agurk",
-      "2 store løg",
-      "2 spsk. smør",
-      "1 spsk. balsamicoeddike",
-      "Salt, peber",
-      "400 g hakket oksekød",
-      "Salt og peber",
-      "8 skiver syltede rødbeder",
-      "1 spsk. smør",
-      "1 spsk. mel",
-      "1 dl kogevand fra kartoflerne",
-      "1 dl fløde",
-      "Salt og peber",
-      "½ tsk. kulør",
-      "1 spsk. eddike",
-      "Salt og peber til servering"
+      "350 g revet kartoffel",
+      "160 g revet squash",
+      "1 porre",
+      "2 æg",
+      "2 store spsk. mel",
+      "Godt med salt og peber",
+      "Godt med smør eller olie til stegning",
+      "1 stor spsk. smør + lidt olie",
+      "2 rødløg",
+      "2 spsk. lys sirup eller akaciehonning",
+      "3 spsk. eddike",
+      "½ tsk. salt",
+      "150 g flødeost naturel",
+      "2 spsk. creme fraiche 18 %",
+      "2 spsk. citronsaft",
+      "½ tsk. flagesalt + peber",
+      "2 spsk. finthakket persille",
+      "1 fed hvidløg",
+      "1 pakke parmaskinke",
+      "frisk dild til toppen",
+      "½ lilla eller grønt spidskål",
+      "1 ½ æbler",
+      "1 håndfuld frisk dild",
+      "½ granatæble",
+      "3 spsk. olie",
+      "1 spsk. citronsaft",
+      "Lidt salt og peber"
      ],
-     "score": 9.5,
+     "score": 1.76,
+     "saving": 28.09,
+     "offer_count": 3
+    }
+   ]
+  },
+  {
+   "day": "Torsdag",
+   "options": [
+    {
+     "id": "aftensmad/pastaretter/one-pot-bolognese-med-oksekoed",
+     "name": "One pot bolognese med oksekød",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/one-pot-bolognese-med-oksekoed/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fit,q_auto,f_auto,e_sharpen:1/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:e0d0e79f-87ae-482d-98c5-8c82ef142a2d",
+     "time": "30 min",
+     "minutes": 30,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "pasta",
+     "cost": 122.89,
+     "offer_share": 0.32,
+     "products": [
+      {
+       "id": "179676",
+       "name": "Bacon i tern",
+       "size": "500 g",
+       "price": 39.0,
+       "qty": 1,
+       "offer": "Tilbud, før 47,25 kr",
+       "pantry": false,
+       "before": 47.25
+      },
+      {
+       "id": "63753",
+       "name": "Squash øko",
+       "size": "1 stk",
+       "price": 9.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37982",
+       "name": "Gulerødder øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "166050",
+       "name": "Pasta Linguine",
+       "size": "500 g",
+       "price": 17.98,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "117029",
+       "name": "Grøntsagsbouillon",
+       "size": "100 g",
+       "price": 5.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "119482",
+       "name": "Hakkede tomater øko",
+       "size": "400 g",
+       "price": 6.91,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129174",
+       "name": "Basilikum",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18305",
+       "name": "Løg",
+       "size": "1 kg",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      }
+     ],
+     "ingredients": [
+      "500 g. Mesterhakket oksekød",
+      "1 løg",
+      "1 fed hvidløg",
+      "1 pk bacontern",
+      "250 g pasta",
+      "2 ds hakkede tomater",
+      "1 squash",
+      "2 store gulerødder",
+      "1 håndfuld frisk basilikum",
+      "Salt og peber",
+      "0,5 L grøntsagsbouillon",
+      "Forberedelsestid ca. 20 min.",
+      "Tilberedning ca. 10-15 min."
+     ],
+     "score": 10.64,
+     "saving": 8.25,
+     "offer_count": 1
+    },
+    {
+     "id": "aftensmad/danske-retter/braendende-kaerlighed",
+     "name": "Brændende kærlighed",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/braendende-kaerlighed/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:ae1ee330-afee-4df7-991e-bbc946c743e1",
+     "time": "40 min",
+     "minutes": 40,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "dansk",
+     "cost": 100.8,
+     "offer_share": 0.0,
+     "products": [
+      {
+       "id": "39150",
+       "name": "Kartofler øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18036",
+       "name": "Syltede rødbeder øko",
+       "size": "400 g",
+       "price": 19.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125811",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "89621",
+       "name": "Sødmælk 3,5% fedt",
+       "size": "500 ml",
+       "price": 8.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "63865",
+       "name": "Stødt sort peber",
+       "size": "100 g",
+       "price": 9.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "121068",
+       "name": "Bacon i tern",
+       "size": "200 g",
+       "price": 12.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18309",
+       "name": "Løg øko",
+       "size": "750 g",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37998",
+       "name": "Purløg",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "1 kg. kartofler",
+      "50 g. smør",
+      "1 dl. fløde eller mælk",
+      "Salt og peber",
+      "300 g. bacon",
+      "2 løg eller rødløg",
+      "Salt og peber",
+      "Syltede rødbeder",
+      "Persille og purløg"
+     ],
+     "score": 9.8,
      "saving": 0.0,
      "offer_count": 0
     },
@@ -4316,7 +2508,7 @@
       "Ris",
       "Forårsløg, ekstra æble og rosiner"
      ],
-     "score": 7.02,
+     "score": 7.32,
      "saving": 0.0,
      "offer_count": 1
     },
@@ -4403,7 +2595,7 @@
        "size": "50 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 10,25 kr",
+       "offer": "Tilbud, før 10,25 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 10.25
       },
@@ -4458,7 +2650,7 @@
        "size": "65 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Skarp pris",
+       "offer": "Skarp pris (avisen: Krydderier)",
        "pantry": false,
        "before": 12.5
       },
@@ -4486,7 +2678,7 @@
        "size": "60 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 11,00 kr",
+       "offer": "Tilbud, før 11,00 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 11.0
       },
@@ -4496,7 +2688,7 @@
        "size": "30 g",
        "price": 10.0,
        "qty": 1,
-       "offer": "Tilbud, før 12,00 kr",
+       "offer": "Tilbud, før 12,00 kr (avisen: Krydderier)",
        "pantry": false,
        "before": 12.0
       },
@@ -4538,9 +2730,1954 @@
       "Yoghurt",
       "Naanbrød"
      ],
-     "score": 1.36,
+     "score": 1.66,
      "saving": 8.17,
      "offer_count": 5
+    }
+   ]
+  },
+  {
+   "day": "Fredag",
+   "options": [
+    {
+     "id": "aftensmad/burger/fiskeburger",
+     "name": "Fiskeburger",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/burger/fiskeburger/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:1d4159da-a674-4208-bd40-52e4e6b8db88",
+     "time": "35 min",
+     "minutes": 35,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "burger",
+     "cost": 186.61,
+     "offer_share": 0.38,
+     "products": [
+      {
+       "id": "103715",
+       "name": "Brioche burgerbolle",
+       "size": "200 g",
+       "price": 22.0,
+       "qty": 1,
+       "offer": "Tilbud, før 23,25 kr",
+       "pantry": false,
+       "before": 23.25
+      },
+      {
+       "id": "138509",
+       "name": "Grønlandske rejer i lage",
+       "size": "170 g",
+       "price": 39.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Grønlandske rejer, røget eller gravad laks)",
+       "pantry": false,
+       "before": 49.95
+      },
+      {
+       "id": "18518",
+       "name": "Icebergsalat",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Iceberg salat)",
+       "pantry": false,
+       "before": 13.0
+      },
+      {
+       "id": "61090",
+       "name": "Agurk øko",
+       "size": "1 stk",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38018",
+       "name": "Dild",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38236",
+       "name": "Rødløg øko",
+       "size": "500 g",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "162820",
+       "name": "Lagereddike klar",
+       "size": "1 l",
+       "price": 6.75,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "81992",
+       "name": "Sukker",
+       "size": "1 kg",
+       "price": 7.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "63860",
+       "name": "Hele sort peber",
+       "size": "100 g",
+       "price": 10.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "85163",
+       "name": "Creme fraiche 18% fedt øko",
+       "size": "200 g",
+       "price": 13.16,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "111016",
+       "name": "Mayonnaise",
+       "size": "400 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38636",
+       "name": "Citron",
+       "size": "1 stk",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "15200",
+       "name": "Dijonsennep",
+       "size": "370 g",
+       "price": 15.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "37998",
+       "name": "Purløg",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93625",
+       "name": "Syltede cornichoner",
+       "size": "190 g",
+       "price": 11.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125887",
+       "name": "Økologiske æg S",
+       "size": "4 stk",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93864",
+       "name": "Paprika",
+       "size": "55 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Krydderier)",
+       "pantry": true,
+       "before": 15.25
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "79955",
+       "name": "Rapsolie",
+       "size": "1 l",
+       "price": 18.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "8 burgerboller",
+      "8 salatblade",
+      "1 agurk",
+      "200 rejer (i lage)",
+      "Lidt frisk dild",
+      "1 stort rødløg",
+      "1,5 dl eddike",
+      "0,5-1 dl vand",
+      "1/2 dl sukker",
+      "Evt. 1 tsk. peberkorn",
+      "1 dl creme fraiche",
+      "3 spsk. mayonnaise",
+      "1 spsk. citronsaft",
+      "1 tsk. sennep",
+      "1/2 tsk. salt + lidt peber",
+      "1 god håndfuld frisk dild, hakket",
+      "1 spsk. hakket purløg",
+      "1 spsk. hakket cornichoner",
+      "600-800 g torskeloins eller rødspættefileter",
+      "2 æg",
+      "1 dl pankorasp",
+      "Salt og peber",
+      "1 spsk. paprika",
+      "½ dl hvedemel",
+      "1 dl olie til stegning"
+     ],
+     "score": 10.56,
+     "saving": 15.2,
+     "offer_count": 3
+    },
+    {
+     "id": "aftensmad/danske-retter/hakkeboef-med-bloede-loeg-og-kartofler",
+     "name": "Hakkebøf med bløde løg og kartofler",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/hakkeboef-med-bloede-loeg-og-kartofler/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:03f73468-1b27-435a-bc8f-ef65c4d319b2",
+     "time": "40 min",
+     "minutes": 40,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "dansk",
+     "cost": 116.4,
+     "offer_share": 0.0,
+     "products": [
+      {
+       "id": "180520",
+       "name": "Hakket oksekød 8-12% fedt",
+       "size": "0.4 kg",
+       "price": 44.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "151786",
+       "name": "Syltede rødbeder",
+       "size": "0.48 kg",
+       "price": 14.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18364",
+       "name": "Agurk",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18305",
+       "name": "Løg",
+       "size": "1 kg",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125811",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "87500",
+       "name": "Balsamicoeddike",
+       "size": "250 ml",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "162820",
+       "name": "Lagereddike klar",
+       "size": "1 l",
+       "price": 6.75,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "81992",
+       "name": "Sukker",
+       "size": "1 kg",
+       "price": 7.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "110567",
+       "name": "Kulør",
+       "size": "200 ml",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "132804",
+       "name": "Piskefløde 36% fedt",
+       "size": "250 ml",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      }
+     ],
+     "ingredients": [
+      "300 g kartofler",
+      "1 dl eddike",
+      "4 spsk. sukker",
+      "½ agurk",
+      "2 store løg",
+      "2 spsk. smør",
+      "1 spsk. balsamicoeddike",
+      "Salt, peber",
+      "400 g hakket oksekød",
+      "Salt og peber",
+      "8 skiver syltede rødbeder",
+      "1 spsk. smør",
+      "1 spsk. mel",
+      "1 dl kogevand fra kartoflerne",
+      "1 dl fløde",
+      "Salt og peber",
+      "½ tsk. kulør",
+      "1 spsk. eddike",
+      "Salt og peber til servering"
+     ],
+     "score": 9.8,
+     "saving": 0.0,
+     "offer_count": 0
+    },
+    {
+     "id": "aftensmad/madpandekager/madvafler",
+     "name": "Madvafler",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/madpandekager/madvafler/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:8d021e25-2370-4fa0-b7fe-bd01e24d09e3",
+     "time": "30-40 min",
+     "minutes": 40,
+     "source": "Bilka opskrifter",
+     "kid": 2,
+     "family": "andet",
+     "cost": 185.68,
+     "offer_share": 0.17,
+     "products": [
+      {
+       "id": "85163",
+       "name": "Creme fraiche 18% fedt øko",
+       "size": "200 g",
+       "price": 13.16,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "19990",
+       "name": "Smøreost naturel 21% fedt",
+       "size": "200 g",
+       "price": 12.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Philadelphia)",
+       "pantry": false,
+       "before": 22.95
+      },
+      {
+       "id": "84121",
+       "name": "Minimælk 0,4% fedt",
+       "size": "1 l",
+       "price": 10.6,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "115245",
+       "name": "Kyllingebrystfilet",
+       "size": "280 g",
+       "price": 32.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125811",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "82383",
+       "name": "Grahamsmel",
+       "size": "1 kg",
+       "price": 12.32,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "117123",
+       "name": "Syltede rødløg",
+       "size": "115 g",
+       "price": 19.75,
+       "qty": 1,
+       "offer": "Tilbud, før 20,85 kr",
+       "pantry": false,
+       "before": 20.85
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38636",
+       "name": "Citron",
+       "size": "1 stk",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37982",
+       "name": "Gulerødder øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "53365",
+       "name": "Skrabeæg M/L",
+       "size": "10 stk",
+       "price": 31.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      }
+     ],
+     "ingredients": [
+      "4 dl mælk",
+      "5 æg",
+      "1/2 tsk. salt",
+      "25 g smør + ekstra til stegning",
+      "200 g hvedemel",
+      "50 g grahamsmel",
+      "100 g flødeost naturel",
+      "½ fed hvidløg",
+      "1 spsk. hakket persille",
+      "Salt og peber",
+      "1 spsk. citronsaft",
+      "1 dl creme fraiche",
+      "½ lilla spidskål",
+      "1-2 gulerødder",
+      "250 g kylling",
+      "2 avocadoer",
+      "Salt og peber",
+      "3 spsk. syltede rødløg (færdigkøbt eller hjemmelavede*)",
+      "Ønsker du at lave de syltede rødløg selv, skal du starte med dette. Snit rødløg fint og kom i et glas. Varm eddike, vand og sukker i en gryde til sukkeret smelter. Hæld det over rødløgene og lad det trække i en times tid inden det bruges"
+     ],
+     "score": 7.14,
+     "saving": 12.05,
+     "offer_count": 2
+    },
+    {
+     "id": "aftensmad/danske-retter/aeggekage",
+     "name": "Æggekage",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/aeggekage/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:8f7469ca-1e54-482f-83dd-5b19ef6bc7f0",
+     "time": "30 min",
+     "minutes": 30,
+     "source": "Bilka opskrifter",
+     "kid": 0,
+     "family": "dansk",
+     "cost": 120.4,
+     "offer_share": 0.13,
+     "products": [
+      {
+       "id": "174557",
+       "name": "Kernerugbrød",
+       "size": "1080 g",
+       "price": 16.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Schulstad brød)",
+       "pantry": false,
+       "before": 25.95
+      },
+      {
+       "id": "92082",
+       "name": "Bacon i skiver",
+       "size": "300 g",
+       "price": 19.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "132804",
+       "name": "Piskefløde 36% fedt",
+       "size": "250 ml",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "106552",
+       "name": "Tomatketchup",
+       "size": "560 g",
+       "price": 15.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "53365",
+       "name": "Skrabeæg M/L",
+       "size": "10 stk",
+       "price": 31.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37998",
+       "name": "Purløg",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18359",
+       "name": "Forårsløg i bundt",
+       "size": "1 stk",
+       "price": 9.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18380",
+       "name": "Tomater",
+       "size": "1 stk",
+       "price": 3.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      }
+     ],
+     "ingredients": [
+      "7 æg",
+      "1,5 dl fløde",
+      "godt med salt og peber",
+      "3 tomater",
+      "1 forårsløg",
+      "1 pakke bacon",
+      "godt med purløg",
+      "Rugbrød til servering",
+      "Smør eller ketchup som smørelse"
+     ],
+     "score": 1.56,
+     "saving": 9.95,
+     "offer_count": 1
+    }
+   ]
+  },
+  {
+   "day": "Lørdag",
+   "options": [
+    {
+     "id": "aftensmad/fiskeretter/fiskefrikadeller",
+     "name": "Fiskefrikadeller",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/fiskeretter/fiskefrikadeller/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:ca2c5d9a-9996-4350-94df-7403ee06c215",
+     "time": "30 min",
+     "minutes": 30,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "fisk",
+     "cost": 116.16,
+     "offer_share": 0.02,
+     "products": [
+      {
+       "id": "38018",
+       "name": "Dild",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "79955",
+       "name": "Rapsolie",
+       "size": "1 l",
+       "price": 18.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "111016",
+       "name": "Mayonnaise",
+       "size": "400 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "111003",
+       "name": "Sød fransk sennep",
+       "size": "400 g",
+       "price": 10.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "85163",
+       "name": "Creme fraiche 18% fedt øko",
+       "size": "200 g",
+       "price": 13.16,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "63861",
+       "name": "Karry",
+       "size": "90 g",
+       "price": 6.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "38636",
+       "name": "Citron",
+       "size": "1 stk",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18309",
+       "name": "Løg øko",
+       "size": "750 g",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37982",
+       "name": "Gulerødder øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "37953",
+       "name": "Rødbeder øko",
+       "size": "1 kg",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18379",
+       "name": "Æbler",
+       "size": "1 stk",
+       "price": 2.75,
+       "qty": 1,
+       "offer": "Mix 10 for 25,00",
+       "pantry": false,
+       "multi": {
+        "n": 10,
+        "total": 25.0
+       }
+      },
+      {
+       "id": "170888",
+       "name": "Rosiner øko",
+       "size": "250 g",
+       "price": 16.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93865",
+       "name": "Solsikkekerner",
+       "size": "400 g",
+       "price": 13.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      }
+     ],
+     "ingredients": [
+      "1 pakke fiskefars",
+      "Lidt ekstra frisk dild",
+      "3 spsk. olie til stegning",
+      "3 spsk. mayonnaise",
+      "1 spsk. sød sennep",
+      "3 spsk. creme fraiche",
+      "Salt og peber",
+      "1 tsk. karry",
+      "1 spsk. citronsaft",
+      "1 løg",
+      "1 gulerod",
+      "1 håndfuld pickles",
+      "3 gulerødder",
+      "1 rødbede",
+      "1 æble",
+      "1 håndfuld rosiner",
+      "1 håndfuld solsikkekerner",
+      "Lidt citronsaft",
+      "Servér evt. med rugbrød, citron og frisk dild"
+     ],
+     "score": 10.34,
+     "saving": 0.0,
+     "offer_count": 1
+    },
+    {
+     "id": "aftensmad/danske-retter/karbonader",
+     "name": "Karbonader",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/danske-retter/karbonader/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:26b30edc-769c-401f-aae1-cde78d53047a",
+     "time": "35 min",
+     "minutes": 35,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "dansk",
+     "cost": 153.34,
+     "offer_share": 0.0,
+     "products": [
+      {
+       "id": "81498",
+       "name": "Hakket grisekød 8-12% fedt",
+       "size": "0.5 kg",
+       "price": 27.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125887",
+       "name": "Økologiske æg S",
+       "size": "4 stk",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "137133",
+       "name": "Rasp øko",
+       "size": "500 g",
+       "price": 16.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "65123",
+       "name": "Saltet smør",
+       "size": "200 g",
+       "price": 21.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "89621",
+       "name": "Sødmælk 3,5% fedt",
+       "size": "500 ml",
+       "price": 8.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "82399",
+       "name": "Fine ærter",
+       "size": "700 g",
+       "price": 13.94,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "39729",
+       "name": "Grønne asparges i bundt",
+       "size": "250 g",
+       "price": 32.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18309",
+       "name": "Løg øko",
+       "size": "750 g",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38178",
+       "name": "Persille",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "84121",
+       "name": "Minimælk 0,4% fedt",
+       "size": "1 l",
+       "price": 10.6,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "17010",
+       "name": "Hvedemel",
+       "size": "2 kg",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "500 g hakket svin",
+      "1 æg",
+      "1 løg",
+      "Godt med salt og peber",
+      "2/3 dl mel",
+      "1 dl mælk",
+      "2 æg",
+      "2 dl rasp",
+      "Salt, peber",
+      "1/2 dl olie eller smør til stegning",
+      "300 g kartofler",
+      "1 spsk. smør",
+      "1 spsk. mel",
+      "3 dl sødmælk",
+      "1 dl ærter (fra frost)",
+      "4 stk. grønne asparges",
+      "1 spsk. hakket persille",
+      "Godt med salt og peber"
+     ],
+     "score": 9.8,
+     "saving": 0.0,
+     "offer_count": 0
+    },
+    {
+     "id": "aftensmad/sandwiches-pita-og-wraps/pita/kartoffelwrap",
+     "name": "Kartoffelwrap",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/sandwiches-pita-og-wraps/pita/kartoffelwrap/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fit,q_auto,f_auto,e_sharpen:1/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:339eba53-a3c8-44d1-bddd-0ed80939b351",
+     "time": "30 min",
+     "minutes": 30,
+     "source": "Bilka opskrifter",
+     "kid": 2,
+     "family": "tex-mex",
+     "cost": 46.1,
+     "offer_share": 0.0,
+     "products": [
+      {
+       "id": "140787",
+       "name": "Revet mozzarella 22% fedt",
+       "size": "200 g",
+       "price": 14.35,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "85235",
+       "name": "Basilikumspesto",
+       "size": "190 g",
+       "price": 10.75,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "50956",
+       "name": "Rucola salat øko",
+       "size": "75 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "138030",
+       "name": "Rødløg",
+       "size": "500 g",
+       "price": 8.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18380",
+       "name": "Tomater",
+       "size": "1 stk",
+       "price": 3.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      }
+     ],
+     "ingredients": [
+      "Ca. 2 kartofler",
+      "1 lille håndfuld revet ost",
+      "Salt og peber",
+      "1 tsk pesto",
+      "Lidt ruccola",
+      "1/2 avocado",
+      "Lidt rødløg",
+      "1/2 tomat"
+     ],
+     "score": 7.0,
+     "saving": 0.0,
+     "offer_count": 0
+    },
+    {
+     "id": "aftensmad/pastaretter/marry-me-chicken",
+     "name": "Marry me chicken",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/marry-me-chicken/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:d4be064c-156b-4830-bfc0-514ee452ebd5",
+     "time": "30-35 min",
+     "minutes": 35,
+     "source": "Ugens madplan",
+     "kid": 0,
+     "family": "kylling",
+     "cost": 212.71,
+     "offer_share": 0.05,
+     "products": [
+      {
+       "id": "139804",
+       "name": "Kyllingefilet tilsat 9% lage",
+       "size": "450 g",
+       "price": 34.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129174",
+       "name": "Basilikum",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "120700",
+       "name": "AMA madlavning 15% fedt",
+       "size": "330 ml",
+       "price": 12.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "123683",
+       "name": "Majsstivelse",
+       "size": "400 g",
+       "price": 13.02,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "79955",
+       "name": "Rapsolie",
+       "size": "1 l",
+       "price": 18.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "70000",
+       "name": "Mafalda Corta",
+       "size": "500 g",
+       "price": 24.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "170956",
+       "name": "Parmigiano Reggiano",
+       "size": "125 g",
+       "price": 35.94,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18305",
+       "name": "Løg",
+       "size": "1 kg",
+       "price": 12.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "51061",
+       "name": "Peberfrugter røde",
+       "size": "1 stk",
+       "price": 9.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "130323",
+       "name": "Soltørrede tomater halve",
+       "size": "180 g",
+       "price": 13.93,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "63863",
+       "name": "Oregano",
+       "size": "25 g",
+       "price": 6.75,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "107066",
+       "name": "Timian",
+       "size": "30 g",
+       "price": 7.4,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "90179",
+       "name": "Rosmarin øko",
+       "size": "40 g",
+       "price": 31.44,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "63865",
+       "name": "Stødt sort peber",
+       "size": "100 g",
+       "price": 9.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "174750",
+       "name": "Chilipulver",
+       "size": "60 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 11,00 kr (avisen: Krydderier)",
+       "pantry": false,
+       "before": 11.0
+      },
+      {
+       "id": "85230",
+       "name": "Tomatpuré på dåse 70 g",
+       "size": "70 g",
+       "price": 4.55,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "117003",
+       "name": "Hønsebouillon",
+       "size": "100 g",
+       "price": 5.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "300 g kyllingebryst",
+      "½ dl majsstivelse",
+      "3 spsk. olie til stegning",
+      "250 g pasta",
+      "1 løg",
+      "2 fed hvidløg",
+      "1 peberfrugt",
+      "En lille håndfuld soltørret tomat , drænet fra olien",
+      "1 tsk. tørret oregano",
+      "1 tsk. tørret timian",
+      "1 tsk. tørret rosmarin",
+      "Godt med salt og peber",
+      "Et godt nip chilipulver",
+      "40 g tomatpuré",
+      "1 bouillonterning",
+      "3 dl af kogevandet fra pastaen",
+      "3 dl fløde",
+      "En håndfuld frisk basilikum",
+      "50 g revet parmesan"
+     ],
+     "score": 1.4,
+     "saving": 1.0,
+     "offer_count": 1
+    }
+   ]
+  },
+  {
+   "day": "Søndag",
+   "options": [
+    {
+     "id": "aftensmad/pastaretter/bolognese",
+     "name": "Bolognese",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/bolognese/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:98b4e59e-a1bf-4389-95a7-439d538c13c5",
+     "time": "40 min",
+     "minutes": 40,
+     "source": "Bilka opskrifter",
+     "kid": 3,
+     "family": "pasta",
+     "cost": 219.83,
+     "offer_share": 0.27,
+     "products": [
+      {
+       "id": "37982",
+       "name": "Gulerødder øko",
+       "size": "1 kg",
+       "price": 15.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "180520",
+       "name": "Hakket oksekød 8-12% fedt",
+       "size": "0.4 kg",
+       "price": 44.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "162740",
+       "name": "Fettuccine",
+       "size": "250 g",
+       "price": 15.0,
+       "qty": 1,
+       "offer": "Tilbud, før 16,50 kr",
+       "pantry": false,
+       "before": 16.5
+      },
+      {
+       "id": "85446",
+       "name": "Tomatpuré",
+       "size": "140 g",
+       "price": 6.1,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "87500",
+       "name": "Balsamicoeddike",
+       "size": "250 ml",
+       "price": 9.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "90168",
+       "name": "Cayennepeber øko",
+       "size": "50 g",
+       "price": 20.84,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "63553",
+       "name": "Pinot Noir",
+       "size": "75 cl",
+       "price": 45.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Francois Martenot)",
+       "pantry": false,
+       "before": 79.0
+      },
+      {
+       "id": "116982",
+       "name": "Oksebouillon",
+       "size": "100 g",
+       "price": 5.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "63865",
+       "name": "Stødt sort peber",
+       "size": "100 g",
+       "price": 9.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "170956",
+       "name": "Parmigiano Reggiano",
+       "size": "125 g",
+       "price": 35.94,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18309",
+       "name": "Løg øko",
+       "size": "750 g",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129174",
+       "name": "Basilikum",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "79955",
+       "name": "Rapsolie",
+       "size": "1 l",
+       "price": 18.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "3 fed hvidløg",
+      "3 gulerødder",
+      "1 løg",
+      "Olie til stegning",
+      "400 g hakket oksekød",
+      "4 store spsk. tomatpuré",
+      "2 spsk. balsamico",
+      "1 nip cayennepeber",
+      "2,5 dl rødvin",
+      "1 bouillonterning lagt i blød i 2,5 dl kogende vand",
+      "Godt med salt og peber",
+      "300-400 g. spaghetti, alt efter hvor meget I kan spise",
+      "Drys med parmesan, ekstra salt og peber og frisk basilikum"
+     ],
+     "score": 10.34,
+     "saving": 35.5,
+     "offer_count": 2
+    },
+    {
+     "id": "aftensmad/sandwiches-pita-og-wraps/pita/wraps-med-kylling",
+     "name": "Wraps med kylling",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/sandwiches-pita-og-wraps/pita/wraps-med-kylling/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:88175400-79ed-4d18-be5f-2f1c0daebc99",
+     "time": "25 min",
+     "minutes": 25,
+     "source": "Bilka opskrifter",
+     "kid": 2,
+     "family": "kylling",
+     "cost": 170.61,
+     "offer_share": 0.21,
+     "products": [
+      {
+       "id": "115245",
+       "name": "Kyllingebrystfilet",
+       "size": "280 g",
+       "price": 32.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "17226",
+       "name": "Tortillas store",
+       "size": "6 x 61.83 g",
+       "price": 15.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Santa Maria Tex Mex)",
+       "pantry": false,
+       "before": 24.95
+      },
+      {
+       "id": "18518",
+       "name": "Icebergsalat",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Iceberg salat)",
+       "pantry": false,
+       "before": 13.0
+      },
+      {
+       "id": "18364",
+       "name": "Agurk",
+       "size": "1 stk",
+       "price": 10.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18380",
+       "name": "Tomater",
+       "size": "1 stk",
+       "price": 3.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18301",
+       "name": "Modne avocadoer",
+       "size": "3 stk",
+       "price": 29.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "138030",
+       "name": "Rødløg",
+       "size": "500 g",
+       "price": 8.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "111016",
+       "name": "Mayonnaise",
+       "size": "400 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "106552",
+       "name": "Tomatketchup",
+       "size": "560 g",
+       "price": 15.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "79955",
+       "name": "Rapsolie",
+       "size": "1 l",
+       "price": 18.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "85163",
+       "name": "Creme fraiche 18% fedt øko",
+       "size": "200 g",
+       "price": 13.16,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "111003",
+       "name": "Sød fransk sennep",
+       "size": "400 g",
+       "price": 10.5,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "63864",
+       "name": "Sød paprika",
+       "size": "100 g",
+       "price": 6.75,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93851",
+       "name": "Hvidløgspulver",
+       "size": "75 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Krydderier)",
+       "pantry": true,
+       "before": 13.5
+      },
+      {
+       "id": "174750",
+       "name": "Chilipulver",
+       "size": "60 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 11,00 kr (avisen: Krydderier)",
+       "pantry": false,
+       "before": 11.0
+      },
+      {
+       "id": "93625",
+       "name": "Syltede cornichoner",
+       "size": "190 g",
+       "price": 11.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      }
+     ],
+     "ingredients": [
+      "280 g kyllingebryst",
+      "2 spsk. olie til stegning",
+      "Lidt salt, peber og grillkrydderi",
+      "4-6 store wraps",
+      "1/2 iceberg salathoved eller hjertesalat",
+      "1 agurk",
+      "3 tomater",
+      "1 avocado",
+      "1 rødløg",
+      "1 god spsk. mayonnaise",
+      "1 lille spsk. ketchup",
+      "1 god spsk. creme fraiche",
+      "1 tsk. sød sennep",
+      "godt med salt og peber",
+      "1/2 tsk. paprika",
+      "1/2 tsk. hvidløgspulver",
+      "1 nip chilipulver",
+      "1 stor cornichon, finthakket"
+     ],
+     "score": 7.72,
+     "saving": 13.95,
+     "offer_count": 3
+    },
+    {
+     "id": "aftensmad/pastaretter/gnocchi-med-salsiccia",
+     "name": "Gnocchi med salsiccia",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/pastaretter/gnocchi-med-salsiccia/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:a375713e-4bd8-436d-893a-051115153668",
+     "time": "20 min",
+     "minutes": 20,
+     "source": "Bilka opskrifter",
+     "kid": 1,
+     "family": "pasta",
+     "cost": 104.9,
+     "offer_share": 0.27,
+     "products": [
+      {
+       "id": "142264",
+       "name": "Gnocchi",
+       "size": "500 g",
+       "price": 15.0,
+       "qty": 1,
+       "offer": "Tilbud, før 17,25 kr",
+       "pantry": false,
+       "before": 17.25
+      },
+      {
+       "id": "40189",
+       "name": "Broccoli øko",
+       "size": "1 stk",
+       "price": 18.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "129946",
+       "name": "Hvidløg øko",
+       "size": "100 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "89526",
+       "name": "Haricots verts øko",
+       "size": "450 g",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "128867",
+       "name": "Fine ærter øko",
+       "size": "400 g",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "38740",
+       "name": "Citroner øko",
+       "size": "500 g",
+       "price": 18.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "19997",
+       "name": "Naturel flødeost 25% fedt",
+       "size": "200 g",
+       "price": 13.0,
+       "qty": 1,
+       "offer": "Skarp pris (avisen: Buko fløde- eller smelteost)",
+       "pantry": false,
+       "before": 24.95
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "63865",
+       "name": "Stødt sort peber",
+       "size": "100 g",
+       "price": 9.25,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "200 g salsiccia i tern",
+      "400 g gnocchi",
+      "200 g broccoli",
+      "2 fed hvidløg",
+      "150 g grønne bønner (fra frost)",
+      "150 g ærter (fra frost)",
+      "Citronskal fra 1 øko citron",
+      "150 g flødeost naturel",
+      "1,5 dl vand",
+      "Godt med salt og peber"
+     ],
+     "score": 4.84,
+     "saving": 14.2,
+     "offer_count": 2
+    },
+    {
+     "id": "aftensmad/tilbehoer/fyldte-peberfrugter",
+     "name": "Fyldte peberfrugter med grisekød",
+     "url": "https://www.bilkatogo.dk/inspiration/opskrifter/aftensmad/tilbehoer/fyldte-peberfrugter/",
+     "image": "https://digitalassets.sallinggroup.com/image/upload/w_1000,dpr_1,c_fill,q_auto,f_auto/t_DigitalAiLogo/external_content_providers/magnolia/next/jcr:7895b1c1-99e2-421a-972c-7e95bfcd52cc",
+     "time": "30-35 min",
+     "minutes": 35,
+     "source": "Ugens madplan",
+     "kid": 0,
+     "family": "andet",
+     "cost": 96.45,
+     "offer_share": 0.0,
+     "products": [
+      {
+       "id": "51061",
+       "name": "Peberfrugter røde",
+       "size": "1 stk",
+       "price": 9.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "81498",
+       "name": "Hakket grisekød 8-12% fedt",
+       "size": "0.5 kg",
+       "price": 27.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "125887",
+       "name": "Økologiske æg S",
+       "size": "4 stk",
+       "price": 13.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18309",
+       "name": "Løg øko",
+       "size": "750 g",
+       "price": 14.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "58615",
+       "name": "Skiveskåret champignon øko",
+       "size": "100 g",
+       "price": 8.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "16868",
+       "name": "Fint salt m. jod",
+       "size": "1 kg",
+       "price": 5.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      },
+      {
+       "id": "93861",
+       "name": "Stødt sort peber",
+       "size": "65 g",
+       "price": 10.0,
+       "qty": 1,
+       "offer": "Tilbud, før 12,25 kr (avisen: Krydderier)",
+       "pantry": true,
+       "before": 12.25
+      },
+      {
+       "id": "84121",
+       "name": "Minimælk 0,4% fedt",
+       "size": "1 l",
+       "price": 10.6,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "145532",
+       "name": "Revet mexi topping 28 % fedt",
+       "size": "150 g",
+       "price": 12.95,
+       "qty": 1,
+       "offer": null,
+       "pantry": false
+      },
+      {
+       "id": "18437",
+       "name": "Timian øko",
+       "size": "1 stk",
+       "price": 17.0,
+       "qty": 1,
+       "offer": null,
+       "pantry": true
+      }
+     ],
+     "ingredients": [
+      "4 peberfrugter",
+      "250 g hakket grisekød",
+      "1 æg",
+      "1 løg",
+      "150 g champignon",
+      "1 tsk. salt og peber",
+      "½ dl mælk",
+      "1 pose revet cheddarost",
+      "En håndfuld frisk timian",
+      "Ovnbagte kartofler og tzatziki:",
+      "300 g kartofler",
+      "3 spsk. olie",
+      "Lidt salt og peber",
+      "1 agurk",
+      "1 fed hvidløg",
+      "Salt og peber",
+      "1 dl græsk yoghurt",
+      "Lidt citronsaft"
+     ],
+     "score": 1.3,
+     "saving": 0.0,
+     "offer_count": 0
     }
    ]
   }
@@ -4585,18 +4722,18 @@
      "offer": "Skarp pris (avisen: Schulstad brød)"
     },
     {
-     "id": "73862",
-     "name": "Kernerugbrød",
-     "size": "600 g",
-     "price": 21.5,
-     "offer": null
+     "id": "38932",
+     "name": "Gulerodsrugbrød",
+     "size": "925 g",
+     "price": 16.0,
+     "offer": "Skarp pris (avisen: Schulstad brød)"
     },
     {
-     "id": "20824",
-     "name": "Solsikkerugbrød",
+     "id": "63813",
+     "name": "Kernerugbrød",
      "size": "750 g",
-     "price": 22.5,
-     "offer": null
+     "price": 24.0,
+     "offer": "Tilbud, før 26,50 kr"
     }
    ]
   },
@@ -4604,13 +4741,6 @@
    "search": "smør",
    "qty": 1,
    "choices": [
-    {
-     "id": "19721",
-     "name": "Smørbar",
-     "size": "200 g",
-     "price": 15.0,
-     "offer": "Skarp pris (avisen: Kærgården original eller let)"
-    },
     {
      "id": "125811",
      "name": "Saltet smør",
@@ -4624,6 +4754,13 @@
      "size": "200 g",
      "price": 9.95,
      "offer": null
+    },
+    {
+     "id": "19721",
+     "name": "Smørbar",
+     "size": "200 g",
+     "price": 20.95,
+     "offer": null
     }
    ]
   },
@@ -4632,17 +4769,17 @@
    "qty": 1,
    "choices": [
     {
+     "id": "40258",
+     "name": "Frilandsæg S/M/L",
+     "size": "10 stk",
+     "price": 24.0,
+     "offer": "Skarp pris (avisen: Dava danske frilandsæg)"
+    },
+    {
      "id": "108507",
      "name": "Økologiske æg M/L",
      "size": "8 stk",
-     "price": 22.0,
-     "offer": "Skarp pris (avisen: Dava økologiske danske æg)"
-    },
-    {
-     "id": "53365",
-     "name": "Skrabeæg M/L",
-     "size": "10 stk",
-     "price": 31.95,
+     "price": 33.55,
      "offer": null
     },
     {
